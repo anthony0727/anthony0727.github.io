@@ -170,4 +170,4 @@ mathjax: true
 - started working on semiconductor manufactoring data
 
 2025-04
-- I quitted
+- I left the team
