@@ -116,7 +116,9 @@ spend my money in order to maximize my utility?” It is a type of optimal decis
 
 <p>You might read it as, “the probability of observing $s_{t+1}$ by taking an action at a state”.</p>
 
-\[\begin{aligned}
+<div class="math-scroll">
+$$
+\begin{aligned}
 \nabla_\theta \log P(\tau^{(i)}; \theta) 
 &amp;= \nabla_\theta \log \left[ 
 \prod_{t=0}^{H} 
@@ -135,7 +137,9 @@ spend my money in order to maximize my utility?” It is a type of optimal decis
 \underbrace{
 \nabla_\theta \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)})
 }_{\text{no dynamics model required!!}}
-\end{aligned}\]
+\end{aligned}
+$$
+</div>
 
 <p>Under parameterization of the policy, the dynamics model is cancelled out and the utility function solely depends on policy and reward function.</p>
 

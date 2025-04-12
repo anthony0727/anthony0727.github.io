@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 12 Apr 2025 21:29:47 +0900</pubDate>
-    <lastBuildDate>Sat, 12 Apr 2025 21:29:47 +0900</lastBuildDate>
+    <pubDate>Sat, 12 Apr 2025 21:32:56 +0900</pubDate>
+    <lastBuildDate>Sat, 12 Apr 2025 21:32:56 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -351,7 +351,9 @@ spend my money in order to maximize my utility?” It is a type of optimal decis
 
 &lt;p&gt;You might read it as, “the probability of observing $s_{t+1}$ by taking an action at a state”.&lt;/p&gt;
 
-\[\begin{aligned}
+&lt;div class=&quot;math-scroll&quot;&gt;
+$$
+\begin{aligned}
 \nabla_\theta \log P(\tau^{(i)}; \theta) 
 &amp;amp;= \nabla_\theta \log \left[ 
 \prod_{t=0}^{H} 
@@ -370,7 +372,9 @@ spend my money in order to maximize my utility?” It is a type of optimal decis
 \underbrace{
 \nabla_\theta \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)})
 }_{\text{no dynamics model required!!}}
-\end{aligned}\]
+\end{aligned}
+$$
+&lt;/div&gt;
 
 &lt;p&gt;Under parameterization of the policy, the dynamics model is cancelled out and the utility function solely depends on policy and reward function.&lt;/p&gt;
 

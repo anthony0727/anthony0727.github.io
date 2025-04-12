@@ -51,6 +51,7 @@ Introducing the concept of "control", i.e. action under stochastic policy $\pi$,
 
 You might read it as, "the probability of observing $s_{t+1}$ by taking an action at a state".
 
+<div class="math-scroll">
 $$
 \begin{aligned}
 \nabla_\theta \log P(\tau^{(i)}; \theta) 
@@ -73,6 +74,7 @@ $$
 }_{\text{no dynamics model required!!}}
 \end{aligned}
 $$
+</div>
 
 Under parameterization of the policy, the dynamics model is cancelled out and the utility function solely depends on policy and reward function.
 
