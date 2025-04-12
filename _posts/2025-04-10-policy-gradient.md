@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Policy gradient"
-excerpt: "Don't ever forget about policy gradient"
+excerpt: "Don't ever forget about policy gradient."
 date:   2025-04-09 15:00:00
 mathjax: true
 ---
@@ -92,6 +92,7 @@ Other post will talk about TRPO.
 
 ---
 
+<div class="math-scroll">
 **References**
 
 Pieter Abbeel's lecture : https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI
@@ -101,3 +102,4 @@ Wikipedia : https://en.wikipedia.org/wiki/Utility_maximization_problem
 REINFORCE, Williams : https://link.springer.com/content/pdf/10.1007/BF00992696.pdf
 
 Schulman's thesis : http://joschu.net/docs/thesis.pdf
+</div>
