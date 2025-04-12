@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Function approximation in Q learning"
-excerpt: ""
+excerpt: "This post talks about function approximation, one of the deadly triad and tabular RL vs deep RL"
 date: 2025-04-09 18:00:00
 mathjax: true
 ---

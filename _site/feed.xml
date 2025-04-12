@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 12 Apr 2025 15:37:07 +0900</pubDate>
-    <lastBuildDate>Sat, 12 Apr 2025 15:37:07 +0900</lastBuildDate>
+    <pubDate>Sat, 12 Apr 2025 20:55:37 +0900</pubDate>
+    <lastBuildDate>Sat, 12 Apr 2025 20:55:37 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -85,7 +85,7 @@
   &lt;li&gt;little interest in continual learning&lt;/li&gt;
   &lt;li&gt;rabbit hole into group theory, manifold from Neurips 2021 tutorial&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;spent the entire night of 12/31 running experiments for r2d2, no sleep&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;failed to justify the work and failed to submit to ICML&lt;/li&gt;
+  &lt;li&gt;observed hopeful experimental results, failed to justify the work and failed to submit to ICML&lt;/li&gt;
   &lt;li&gt;server maintenance&lt;/li&gt;
   &lt;li&gt;graph convolutional RL for MARL&lt;/li&gt;
   &lt;li&gt;traffic routing, flatland&lt;/li&gt;
@@ -202,12 +202,203 @@
 
 &lt;p&gt;2025-04&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;I quitted&lt;/li&gt;
+  &lt;li&gt;I left the team&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
         <link>http://localhost:4000/2025/04/10/my-failure-log/</link>
         <guid isPermaLink="true">http://localhost:4000/2025/04/10/my-failure-log/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>What is the definition of existence?</title>
+        <description>&lt;p&gt;I’m not a regular book reader,&lt;/p&gt;
+
+&lt;p&gt;but the book I read around age 13 made me think about&lt;/p&gt;
+
+&lt;p&gt;“What does it mean that something exists?”&lt;/p&gt;
+
+&lt;p&gt;I came up with this funny idea,&lt;/p&gt;
+
+&lt;p&gt;“Saying something ‘doesn’t exist’ is kind of falsy — because non-existence already implies that it exists as a concept.”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/what-is-existence/image.png&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;by Peter Kröning&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.de/Genies-k%C3%B6nnen-irren-Peter-Kr%C3%B6ning/dp/3784429025&quot;&gt;text&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Can be translated as Errors and Serendipity in the History of Science&lt;/p&gt;
+
+&lt;p&gt;Heigenberg, uncertainty principle&lt;/p&gt;
+
+&lt;p&gt;Religion&lt;/p&gt;
+
+&lt;p&gt;Movie contact&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/what-is-existence/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/what-is-existence/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Function approximation in Q learning</title>
+        <description>&lt;p&gt;Q. Is RL guaranteed to find optimal policy and value function? The discrepancy between tabular methods and function approximation.&lt;/p&gt;
+
+&lt;p&gt;For any finite Markov decision process, Q-learning finds an optimal policy.&lt;/p&gt;
+
+&lt;p&gt;Q-learning is off-policy TD control (Sarsa is on-policy TD control)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/optimality-of-q/image 1.png&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Policy evaluation : Estimate $v_{\pi}(s)$&lt;/li&gt;
+  &lt;li&gt;Policy improvement : Generate $\pi’ \geq \pi$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/optimality-of-q/image.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;$\hat{v}(s; \theta) \approx v_\pi(s)$&lt;/p&gt;
+
+&lt;p&gt;The Bellman equation is linear equation that can be solved directly, but only for small state space.&lt;/p&gt;
+
+\[\begin{aligned}
+v &amp;amp;= R + \gamma P v \\\\
+(I - \gamma P) v &amp;amp;= R \\\\
+v &amp;amp;= (I - \gamma P)^{-1} R
+\end{aligned}\]
+
+&lt;p&gt;Updates :&lt;/p&gt;
+
+&lt;p&gt;Monte Carlo  : $S_t \mapsto G_t$,&lt;/p&gt;
+
+&lt;p&gt;TD(0) : $S_t \mapsto R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t)$&lt;/p&gt;
+
+&lt;p&gt;$n$-step TD : $S_t \mapsto G_{t:t+n}$&lt;/p&gt;
+
+&lt;p&gt;DP : $s \mapsto \mathbb{E}_\pi \left[ R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t) \mid S_t = s \right]$&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;david silver lecture&lt;/p&gt;
+
+&lt;p&gt;sutton&lt;/p&gt;
+
+&lt;p&gt;value improvement path&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/optimality-of-q/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/optimality-of-q/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Most of the deep RL algorithms are TD(0)</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/td/image.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/TD/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/TD/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Policy gradient</title>
+        <description>&lt;p&gt;Pieter Abbeel is such a great teacher.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI&quot;&gt;Video&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We consider utility $U(\theta)$, dynamics $P$, reward $R$ and trajectories $\tau \in \mathcal D$.&lt;/p&gt;
+
+&lt;p&gt;It aims to maximize the utility, under (semi-)supervision of reward.&lt;/p&gt;
+
+\[U(\theta) = \sum_{\tau} P(\tau; \theta)\, R(\tau)\]
+
+&lt;blockquote&gt;
+  &lt;p&gt;In microeconomics, the utility maximization problem is the problem consumers face: “How should I 
+spend my money in order to maximize my utility?” It is a type of optimal decision problem.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dynamics describe how the world will change, given previous state and action.&lt;/p&gt;
+
+&lt;p&gt;It can be any dynamics such as classical mechanics, fluid dynamics, ecnomics, etc, but oftentimes, the real-world is more complex than simple lines of abstract equations.&lt;/p&gt;
+
+&lt;p&gt;Vanilla policy gradient is free from the model (dynamics) of the world, as dervied below.&lt;/p&gt;
+
+&lt;p&gt;Taking the gradient w.r.t. $\theta$ gives :&lt;/p&gt;
+
+\[\begin{aligned}
+\nabla_\theta U(\theta) &amp;amp;= \nabla_\theta \sum_{\tau} P(\tau; \theta) R(\tau) \\\\
+&amp;amp;= \sum_{\tau} \nabla_\theta P(\tau; \theta) R(\tau) \\\\
+&amp;amp;= \sum_{\tau} \frac{P(\tau; \theta)}{P(\tau; \theta)} \nabla_\theta P(\tau; \theta) R(\tau) \\\\
+&amp;amp;= \sum_{\tau} P(\tau; \theta) \frac{\nabla_\theta P(\tau; \theta)}{P(\tau; \theta)} R(\tau) \\\\
+&amp;amp;= \sum_{\tau} P(\tau; \theta) \nabla_\theta \log P(\tau; \theta) R(\tau)
+\end{aligned}\]
+
+&lt;p&gt;Approximate with the empirical estimate for $m$ sample paths under policy $\pi_\theta$ :&lt;/p&gt;
+
+\[\nabla_\theta U(\theta) \approx \hat{g} = \frac{1}{m} \sum_{i=1}^m \nabla_\theta \log P(\tau^{(i)}; \theta) R(\tau^{(i)})\]
+
+&lt;p&gt;The average is Monte-carlo estimation, and practically, single sample $m=1$ is used.&lt;/p&gt;
+
+&lt;p&gt;Introducing the concept of “control”, i.e. action under stochastic policy $\pi$, we can decompse trajectory into state $s$ and action $u$.&lt;/p&gt;
+
+&lt;p&gt;You might read it as, “the probability of observing $s_{t+1}$ by taking an action at a state”.&lt;/p&gt;
+
+\[\begin{aligned}
+\nabla_\theta \log P(\tau^{(i)}; \theta) 
+&amp;amp;= \nabla_\theta \log \left[ 
+\prod_{t=0}^{H} 
+\underbrace{P(s_{t+1}^{(i)} \mid s_t^{(i)}, u_t^{(i)})}_{\text{dynamics model}} 
+\cdot 
+\underbrace{\pi_\theta(u_t^{(i)} \mid s_t^{(i)})}_{\text{policy}} 
+\right] \\\\
+&amp;amp;= \nabla_\theta \left[
+\sum_{t=0}^{H} \log P(s_{t+1}^{(i)} \mid s_t^{(i)}, u_t^{(i)}) 
++ 
+\sum_{t=0}^{H} \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)})
+\right] \\\\
+&amp;amp;= \nabla_\theta 
+\sum_{t=0}^{H} \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)}) \\\\
+&amp;amp;= \sum_{t=0}^{H} 
+\underbrace{
+\nabla_\theta \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)})
+}_{\text{no dynamics model required!!}}
+\end{aligned}\]
+
+&lt;p&gt;Under parameterization of the policy, the dynamics model is cancelled out and the utility function solely depends on policy and reward function.&lt;/p&gt;
+
+&lt;p&gt;The gradient tries to increase probability of paths with positive $R$, and vice versa.&lt;/p&gt;
+
+&lt;p&gt;However, the high variance of the observed rewards $R$ leads to high variance in policy gradient, making it unstable.&lt;/p&gt;
+
+&lt;p&gt;To solve this, baseline $b$ is introduced, lowering the variance but making the gradient estimator  still unbiased.&lt;/p&gt;
+
+&lt;p&gt;Improving from constant baseline substraction, value function is adopted and actor-critic methods emerged, GAE, TRPO and PPO, so on.&lt;/p&gt;
+
+&lt;p&gt;Other post will talk about TRPO.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Pieter Abbeel’s lecture : https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI&lt;/p&gt;
+
+&lt;p&gt;Wikipedia : https://en.wikipedia.org/wiki/Utility_maximization_problem&lt;/p&gt;
+
+&lt;p&gt;REINFORCE, Williams : https://link.springer.com/content/pdf/10.1007/BF00992696.pdf&lt;/p&gt;
+
+&lt;p&gt;Schulman’s thesis : http://joschu.net/docs/thesis.pdf&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/policy-gradient/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/policy-gradient/</guid>
         
         
       </item>

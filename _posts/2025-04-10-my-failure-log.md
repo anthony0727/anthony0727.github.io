@@ -64,7 +64,7 @@ mathjax: true
 - little interest in continual learning
 - rabbit hole into group theory, manifold from Neurips 2021 tutorial
 - **spent the entire night of 12/31 running experiments for r2d2, no sleep**
-- failed to justify the work and failed to submit to ICML
+- observed hopeful experimental results, failed to justify the work and failed to submit to ICML
 - server maintenance
 - graph convolutional RL for MARL
 - traffic routing, flatland
