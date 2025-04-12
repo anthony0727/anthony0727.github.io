@@ -428,3 +428,10 @@ a:visited { color: #205caa; }
     margin: 0 0 15px; }
 
 }
+
+/* math */
+
+.math-scroll {
+  overflow-x: auto;
+  width: 100%;
+}
