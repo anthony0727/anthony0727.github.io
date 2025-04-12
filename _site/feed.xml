@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 12 Apr 2025 21:32:56 +0900</pubDate>
-    <lastBuildDate>Sat, 12 Apr 2025 21:32:56 +0900</lastBuildDate>
+    <pubDate>Sat, 12 Apr 2025 21:34:56 +0900</pubDate>
+    <lastBuildDate>Sat, 12 Apr 2025 21:34:56 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -343,7 +343,11 @@ spend my money in order to maximize my utility?” It is a type of optimal decis
 
 &lt;p&gt;Approximate with the empirical estimate for $m$ sample paths under policy $\pi_\theta$ :&lt;/p&gt;
 
-\[\nabla_\theta U(\theta) \approx \hat{g} = \frac{1}{m} \sum_{i=1}^m \nabla_\theta \log P(\tau^{(i)}; \theta) R(\tau^{(i)})\]
+&lt;div class=&quot;math-scroll&quot;&gt;
+$$
+\nabla_\theta U(\theta) \approx \hat{g} = \frac{1}{m} \sum_{i=1}^m \nabla_\theta \log P(\tau^{(i)}; \theta) R(\tau^{(i)})
+$$
+&lt;/div&gt;
 
 &lt;p&gt;The average is Monte-carlo estimation, and practically, single sample $m=1$ is used.&lt;/p&gt;
 

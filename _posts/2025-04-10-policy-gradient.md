@@ -41,9 +41,11 @@ $$
 
 Approximate with the empirical estimate for $m$ sample paths under policy $\pi_\theta$ :
 
+<div class="math-scroll">
 $$
 \nabla_\theta U(\theta) \approx \hat{g} = \frac{1}{m} \sum_{i=1}^m \nabla_\theta \log P(\tau^{(i)}; \theta) R(\tau^{(i)})
 $$
+</div>
 
 The average is Monte-carlo estimation, and practically, single sample $m=1$ is used.
 
