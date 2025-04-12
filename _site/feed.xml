@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 12 Apr 2025 20:55:37 +0900</pubDate>
-    <lastBuildDate>Sat, 12 Apr 2025 20:55:37 +0900</lastBuildDate>
+    <pubDate>Sat, 12 Apr 2025 21:04:59 +0900</pubDate>
+    <lastBuildDate>Sat, 12 Apr 2025 21:04:59 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -316,7 +316,7 @@ v &amp;amp;= (I - \gamma P)^{-1} R
 
 &lt;p&gt;We consider utility $U(\theta)$, dynamics $P$, reward $R$ and trajectories $\tau \in \mathcal D$.&lt;/p&gt;
 
-&lt;p&gt;It aims to maximize the utility, under (semi-)supervision of reward.&lt;/p&gt;
+&lt;p&gt;Policy gradient aims to maximize the utility, under (semi-)supervision of reward.&lt;/p&gt;
 
 \[U(\theta) = \sum_{\tau} P(\tau; \theta)\, R(\tau)\]
 

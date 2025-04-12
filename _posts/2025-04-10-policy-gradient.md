@@ -12,7 +12,7 @@ Pieter Abbeel is such a great teacher.
 
 We consider utility $U(\theta)$, dynamics $P$, reward $R$ and trajectories $\tau \in \mathcal D$.
 
-It aims to maximize the utility, under (semi-)supervision of reward.
+Policy gradient aims to maximize the utility, under (semi-)supervision of reward.
 
 $$
 U(\theta) = \sum_{\tau} P(\tau; \theta)\, R(\tau)
