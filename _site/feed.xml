@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anthony W. Jung</title>
+    <description>Machine Learning Engineer</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 12 Apr 2025 15:37:07 +0900</pubDate>
+    <lastBuildDate>Sat, 12 Apr 2025 15:37:07 +0900</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>My failure log</title>
+        <description>&lt;style&gt;
+.post-header h1 {
+    font-size: 35px;
+}
+.post pre,
+.post code {
+    background-color: #fcfcfc;
+    font-size: 13px; /* make code smaller for this post... */
+}
+&lt;/style&gt;
+
+&lt;p&gt;2020-10~&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;studied GAN&lt;/li&gt;
+  &lt;li&gt;started David Silver’s lecture, Sutton book, PRML in a study club. Younghoon is such a brilliant guy&lt;/li&gt;
+  &lt;li&gt;multi-agent snake game
+    &lt;ul&gt;
+      &lt;li&gt;celery, dockerized agent, redis, mongodb&lt;/li&gt;
+      &lt;li&gt;ranking system (trueskill), belief network&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;came up with the idea of DFS to solve initialization of snakes’ positions&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;imitation learning, implemented GAIL, we built custom expert trajectories, partial observation
+    &lt;ul&gt;
+      &lt;li&gt;fixed discriminator collapsing&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;felt happy when it worked&lt;/strong&gt;&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/assets/my-failure-log/image.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;tried to abstract RL, and tried to implement RL library, RL2&lt;/li&gt;
+  &lt;li&gt;tried to observe emergent behavior from multi-agent RL, game theory
+    &lt;ul&gt;
+      &lt;li&gt;studied QMix, COMA&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;deployed alpha version of snake battle, ~10 people participated, Azure&lt;/li&gt;
+  &lt;li&gt;worked with intern on decision tree + deep model; fell into “rabbit hole” of fractal math&lt;/li&gt;
+  &lt;li&gt;helped outsider on dockerizing R + Python environment for genomics area&lt;/li&gt;
+  &lt;li&gt;implemented VAIL&lt;/li&gt;
+  &lt;li&gt;another rabbit hole into instrumental variable, graphical model, GLS (Generalized Least Squares)&lt;/li&gt;
+  &lt;li&gt;little interest in the acceleration of RL, GPU simulator, FPGA&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2021-09~&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;started working with Wontae, Rescaled Representation Space for Robust RL (r2d2). overfitting and catastrophic forgetting&lt;/li&gt;
+  &lt;li&gt;rabbit hole of smoothness (Lipshitz), functional analysis of DQN, algorithmic error&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;gained new perspective on RL from value improvement path, value polytope&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;pondering about weight dynamics of DQN, regularization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/my-failure-log/image 1.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AI for music, ISMIR. thought about EGG, what is emotion? should be more complex than discrete variable on valance/arousal plane. met Keunwoo Choi there! Another rabbit hole into definition of emotion.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/my-failure-log/image 2.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;scratched surface of signal processing, librosa, etc. melspectrogram&lt;/li&gt;
+  &lt;li&gt;rabbit hole into complex-valued NN
+&lt;!-- , during research on &lt;span markdown=&quot;0&quot;&gt;\(||\cdot||_{0&lt;p&lt;1}\)&lt;/span&gt; --&gt;&lt;/li&gt;
+  &lt;li&gt;weight’s magnitude, direction (angle) of the representation in RL&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;intepretability! distill.pub, Christopher Olah.&lt;/strong&gt; he is a genius. later he co-founded Anthropic, and I think the company will pioneer AI&lt;/li&gt;
+  &lt;li&gt;started compiler optimization&lt;/li&gt;
+  &lt;li&gt;little interest in continual learning&lt;/li&gt;
+  &lt;li&gt;rabbit hole into group theory, manifold from Neurips 2021 tutorial&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;spent the entire night of 12/31 running experiments for r2d2, no sleep&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;failed to justify the work and failed to submit to ICML&lt;/li&gt;
+  &lt;li&gt;server maintenance&lt;/li&gt;
+  &lt;li&gt;graph convolutional RL for MARL&lt;/li&gt;
+  &lt;li&gt;traffic routing, flatland&lt;/li&gt;
+  &lt;li&gt;little interest in optimizing replay buffer in cpp, pre-allocation&lt;/li&gt;
+  &lt;li&gt;started using ray/RLlib&lt;/li&gt;
+  &lt;li&gt;started studying GNN, laplacian operator, Chevyshev convolution&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;had really fun with Eunki and Yongsun&lt;/strong&gt;, stable matching, gale-shapley, multi-agent RL&lt;/li&gt;
+  &lt;li&gt;MARL on various envs, l2rpn, magent&lt;/li&gt;
+  &lt;li&gt;keep studying GNN, using program graph, CompilerGym&lt;/li&gt;
+  &lt;li&gt;MCMC, Jeremy Kun&lt;/li&gt;
+  &lt;li&gt;adopt language encoding methods for program sequence&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;made RLlib work with graphs, really hacky&lt;/strong&gt;, dynamic observation space&lt;/li&gt;
+  &lt;li&gt;adjacency matrix consumes huge memory → multi gpu training (sparse matrix has its cons, trade-off)&lt;/li&gt;
+  &lt;li&gt;isotropy in graph&lt;/li&gt;
+  &lt;li&gt;made RL2 work on CompilerGym. Wait, I kept using RL2 until now..?&lt;/li&gt;
+  &lt;li&gt;rabbit hole into sheaf theory, oversquashing in graph, graph rewiring, strong collapse, discrete ricci flow, TDA, persistent homology. Michael Bronstein, Aleksa Gordić&lt;/li&gt;
+  &lt;li&gt;failed to submit to ISCA compiler competition&lt;/li&gt;
+  &lt;li&gt;jpeg-d sped up 13.6% with RL+GNN approach&lt;/li&gt;
+  &lt;li&gt;gave feedback of their product, and MakinaRocks CEO gave me 10만원 starbucks card!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2022-05~&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: gray;&quot;&gt;→ sometimes, life is hard, life got a little toxic&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;servers keep crashing, fix, fix, fix…&lt;/li&gt;
+  &lt;li&gt;stable matching&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;contributed to FAIR repository! (the penguin)&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/my-failure-log/image 3.png&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;interest in sparse modeling&lt;/li&gt;
+  &lt;li&gt;suddenly I started gravitational wave classification…?&lt;/li&gt;
+  &lt;li&gt;thought about window function of fourier transform&lt;/li&gt;
+  &lt;li&gt;suddenly I started audio sentiment analysis, trying to distill semantic features from teacher (kogpt) to student (audio model). scraped 700,000 lyrics from Melon&lt;/li&gt;
+  &lt;li&gt;probabilistic model using pyro&lt;/li&gt;
+  &lt;li&gt;metrics in gnn, Weisfeiler-Lehman, Gromov-Wasserstein, isomorphism&lt;/li&gt;
+  &lt;li&gt;diffusion model, langevin dynamics&lt;/li&gt;
+  &lt;li&gt;after few hours of brainstorming session, Sanmun and Chaejin asked me for collaboration, KAIST&lt;/li&gt;
+  &lt;li&gt;reduced training time 60 hours to 10 hours in few days after joining! weird file IO and GPU wasn’t utilized, who coded this…&lt;/li&gt;
+  &lt;li&gt;kept trying to find topics that I can delve into, but kept diverging…&lt;/li&gt;
+  &lt;li&gt;started blockchain analysis with Jungyoon&lt;/li&gt;
+  &lt;li&gt;re-implemented everything in RLlib for JLAB&lt;/li&gt;
+  &lt;li&gt;interest in optimal transport and NTK&lt;/li&gt;
+  &lt;li&gt;gathered anomaly transaction label from etherscan&lt;/li&gt;
+  &lt;li&gt;Neo4j to deal with gigantic graph, dumped the chain and loaded into DB&lt;/li&gt;
+  &lt;li&gt;study dynamics graph (Ethereum transaction), also refer to Uber’s dynamic graph&lt;/li&gt;
+  &lt;li&gt;how to sample from huge graph that, samples can cover mother population?&lt;/li&gt;
+  &lt;li&gt;Skill-based RL on mujoco,&lt;/li&gt;
+  &lt;li&gt;studied state clusters during skill-based RL training&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2023-05~&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;made physics-informed RL work for optical device design! KAIST prof. invited me for lunch and was offered co-first author&lt;/li&gt;
+  &lt;li&gt;rabbit hole into complex-valued autoencoder, hyperspherical representation, tried to derive Von-Mises latent, ELBO&lt;/li&gt;
+  &lt;li&gt;conjugate graph (line graph)&lt;/li&gt;
+  &lt;li&gt;studying Dreamer V3, world-model&lt;/li&gt;
+  &lt;li&gt;tried to implement Dreamer V3 in RLlib, failed&lt;/li&gt;
+  &lt;li&gt;testing typical decision tree, logistic regression on blockchain anomaly detection&lt;/li&gt;
+  &lt;li&gt;museli, mpo&lt;/li&gt;
+  &lt;li&gt;adapt Dreamer V1 into compiler optimization&lt;/li&gt;
+  &lt;li&gt;rabbit hole into equivariant CNN&lt;/li&gt;
+  &lt;li&gt;writing physics-informed RL paper to publish at physics journal, Chaejin is such a hard-working, smart student&lt;/li&gt;
+  &lt;li&gt;eigenvalue of graph Laplacian, Fiedler eigenvalue&lt;/li&gt;
+  &lt;li&gt;started working on superoptimization with RL. MCTS, muzero, efficientzero, reproduce AlphaDev with STOKE, x86&lt;/li&gt;
+  &lt;li&gt;studying natural language processing to handle assembly language&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: gray;&quot;&gt;→ Leave of absence for a month, due to anxiety attack&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;2024~&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;physics journal paper got accepted!&lt;/li&gt;
+  &lt;li&gt;started working on neural operator&lt;/li&gt;
+  &lt;li&gt;wrote manuscript for superoptimization&lt;/li&gt;
+  &lt;li&gt;my co-worker in superoptimization project left&lt;/li&gt;
+  &lt;li&gt;made Dreamer V3 work on material design problem, that was quick!&lt;/li&gt;
+  &lt;li&gt;made FNO work on electric field prediction, that was quick!&lt;/li&gt;
+  &lt;li&gt;got productive, didn’t know that getting rest is important&lt;/li&gt;
+  &lt;li&gt;wrote manuscript on scientific ML, submitted to neurips — I doubted that this paper will be accepted and insisted this work should change direction. failed to convince manager&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2024-06~&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;thinking about control problem in PDE&lt;/li&gt;
+  &lt;li&gt;thinking about model collapse when training on recursively generated data; should humanity have downloaded snapshot of internet at some point? probably openai already did&lt;/li&gt;
+  &lt;li&gt;received quite good scores for neurips but rejected — as expected&lt;/li&gt;
+  &lt;li&gt;working on the extension of physics journal paper&lt;/li&gt;
+  &lt;li&gt;little bit of RAG&lt;/li&gt;
+  &lt;li&gt;started AI compiler study and led deep model compiler team, triton, CUDA, but implementing kernels don’t really interest me…&lt;/li&gt;
+  &lt;li&gt;diffusion model (Flux.1-dev) fine-tuning in study club&lt;/li&gt;
+  &lt;li&gt;optimizing Flux.1-dev on tinygrad in study club&lt;/li&gt;
+  &lt;li&gt;diffusion for control in PDE, also offline RL&lt;/li&gt;
+  &lt;li&gt;re-submitted the SciML paper to ICLR, rejected&lt;/li&gt;
+  &lt;li&gt;my co-author left the team&lt;/li&gt;
+  &lt;li&gt;went to neurips and met Will Dabney and Marc G. Bellemere, I want to work with them so bad&lt;/li&gt;
+  &lt;li&gt;met great people including Hyungwon Chung, Kyunghyun Cho, could listen to their stories, and later on I found his “Don’t teach. Incentivize.” seminar. it gave me new perspective.&lt;/li&gt;
+  &lt;li&gt;some progress on the extension of physics journal paper, thanks to the literature Will Dabney shared&lt;/li&gt;
+  &lt;li&gt;found interesting work, SINDy-RL, Steve Brunton, very nice literature&lt;/li&gt;
+  &lt;li&gt;tried to use fluid dynamics (CFD) simulator, very torturing, but finally made it work&lt;/li&gt;
+  &lt;li&gt;re-visiting weight dynamics, plasticity loss in continual RL. Nikishin, Clare lyle and Sutton&lt;/li&gt;
+  &lt;li&gt;re-submitted the SciML paper to ICML, rejected, of course&lt;/li&gt;
+  &lt;li&gt;CoT fine-tuning DeepSeek-R1&lt;/li&gt;
+  &lt;li&gt;can’t we track the change of weight magnitude when normalizing the weight in RL? similar to the idea from r2d2 3 years ago -&amp;gt; nice work on this by adding new axis to the weight, came out from KAIST&lt;/li&gt;
+  &lt;li&gt;can’t we regularize the weight with orthogonality to keep “effective rank”? -&amp;gt; found exact same idea published recently&lt;/li&gt;
+  &lt;li&gt;started working on semiconductor manufactoring data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2025-04&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I quitted&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/my-failure-log/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/my-failure-log/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

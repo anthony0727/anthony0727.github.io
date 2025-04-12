@@ -1,0 +1,20 @@
+# Site settings
+title: Anthony W. Jung
+email: jwseok0727@gmail.com
+description: "Machine Learning Engineer"
+baseurl: ""
+url: "http://anthony0727.github.io"
+twitter_username: Anthony37709726
+github_username:  anthony0727
+linkedin_username: anthony0727
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
