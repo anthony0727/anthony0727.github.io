@@ -15,7 +15,7 @@ However, the sensory input to agent is "the observation of a state", which may o
 
 A good example of state being equal to observation is games like chess, where the positions of pieces are complete enough for winning. You don't need chess board's thickness to win the game.
 
-Hoever, many real-world scenarios the state cannot be observed, and in oracle perspective, cannot be even defined. (First principles can be broken!)
+However, many real-world scenarios the state cannot be observed, and in oracle perspective, cannot be even defined. (First principles can be broken!)
 
 Camera sensors outputs occluded images from 2D projection. 
 

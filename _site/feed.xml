@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 16 Apr 2025 00:22:04 +0900</pubDate>
-    <lastBuildDate>Wed, 16 Apr 2025 00:22:04 +0900</lastBuildDate>
+    <pubDate>Wed, 16 Apr 2025 01:17:51 +0900</pubDate>
+    <lastBuildDate>Wed, 16 Apr 2025 01:17:51 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -472,7 +472,7 @@ $$
 
 &lt;p&gt;A good example of state being equal to observation is games like chess, where the positions of pieces are complete enough for winning. You don’t need chess board’s thickness to win the game.&lt;/p&gt;
 
-&lt;p&gt;Hoever, many real-world scenarios the state cannot be observed, and in oracle perspective, cannot be even defined. (First principles can be broken!)&lt;/p&gt;
+&lt;p&gt;However, many real-world scenarios the state cannot be observed, and in oracle perspective, cannot be even defined. (First principles can be broken!)&lt;/p&gt;
 
 &lt;p&gt;Camera sensors outputs occluded images from 2D projection.&lt;/p&gt;
 
