@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Function approximation in Q learning</title>
+    <title>Policy gradient</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Machine Learning Engineer">
-    <link rel="canonical" href="http://localhost:4000/2025/04/10/optimality-of-q/">
+    <link rel="canonical" href="http://localhost:4000/2025/04/11/policy-gradient/">
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Anthony W. Jung posts" />
 
     <!-- Custom CSS -->
@@ -70,53 +70,102 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>Function approximation in Q learning</h1>
-    <p class="meta">Apr 10, 2025</p>
+    <h1>Policy gradient</h1>
+    <p class="meta">Apr 11, 2025</p>
   </header>
 
   <article class="post-content">
-  <p>Q. Is RL guaranteed to find optimal policy and value function? The discrepancy between tabular methods and function approximation.</p>
+  <p>Pieter Abbeel is such a great teacher.</p>
 
-<p>For any finite Markov decision process, Q-learning finds an optimal policy.</p>
+<p><a href="https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI">Video</a></p>
 
-<p>Q-learning is off-policy TD control (Sarsa is on-policy TD control)</p>
+<p>We consider utility $U(\theta)$, dynamics $P$, reward $R$ and trajectories $\tau \in \mathcal D$.</p>
 
-<p><img src="/assets/optimality-of-q/image 1.png" width="40%" /></p>
+<p>Policy gradient aims to maximize the utility, under (semi-)supervision of reward.</p>
 
-<ul>
-  <li>Policy evaluation : Estimate $v_{\pi}(s)$</li>
-  <li>Policy improvement : Generate $\pi’ \geq \pi$</li>
-</ul>
+\[U(\theta) = \sum_{\tau} P(\tau; \theta)\, R(\tau)\]
 
-<p><img src="/assets/optimality-of-q/image.png" width="60%" /></p>
+<blockquote>
+  <p>In microeconomics, the utility maximization problem is the problem consumers face: “How should I 
+spend my money in order to maximize my utility?” It is a type of optimal decision problem.</p>
+</blockquote>
 
-<p>$\hat{v}(s; \theta) \approx v_\pi(s)$</p>
+<p>Dynamics describe how the world will change, given previous state and action.</p>
 
-<p>The Bellman equation is linear equation that can be solved directly, but only for small state space.</p>
+<p>It can be any dynamics such as classical mechanics, fluid dynamics, ecnomics, etc, but oftentimes, the real-world is more complex than simple lines of abstract equations.</p>
+
+<p>Vanilla policy gradient is free from the model (dynamics) of the world, as dervied below.</p>
+
+<p>Taking the gradient w.r.t. $\theta$ gives :</p>
 
 \[\begin{aligned}
-v &amp;= R + \gamma P v \\\\
-(I - \gamma P) v &amp;= R \\\\
-v &amp;= (I - \gamma P)^{-1} R
+\nabla_\theta U(\theta) &amp;= \nabla_\theta \sum_{\tau} P(\tau; \theta) R(\tau) \\\\
+&amp;= \sum_{\tau} \nabla_\theta P(\tau; \theta) R(\tau) \\\\
+&amp;= \sum_{\tau} \frac{P(\tau; \theta)}{P(\tau; \theta)} \nabla_\theta P(\tau; \theta) R(\tau) \\\\
+&amp;= \sum_{\tau} P(\tau; \theta) \frac{\nabla_\theta P(\tau; \theta)}{P(\tau; \theta)} R(\tau) \\\\
+&amp;= \sum_{\tau} P(\tau; \theta) \nabla_\theta \log P(\tau; \theta) R(\tau)
 \end{aligned}\]
 
-<p>Updates :</p>
+<p>Approximate with the empirical estimate for $m$ sample paths under policy $\pi_\theta$ :</p>
 
-<p>Monte Carlo  : $S_t \mapsto G_t$,</p>
+<div class="math-scroll">
+$$
+\nabla_\theta U(\theta) \approx \hat{g} = \frac{1}{m} \sum_{i=1}^m \nabla_\theta \log P(\tau^{(i)}; \theta) R(\tau^{(i)})
+$$
+</div>
 
-<p>TD(0) : $S_t \mapsto R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t)$</p>
+<p>The average is Monte-carlo estimation, and practically, single sample $m=1$ is used.</p>
 
-<p>$n$-step TD : $S_t \mapsto G_{t:t+n}$</p>
+<p>Introducing the concept of “control”, i.e. action under stochastic policy $\pi$, we can decompse trajectory into state $s$ and action $u$.</p>
 
-<p>DP : $s \mapsto \mathbb{E}_\pi \left[ R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t) \mid S_t = s \right]$</p>
+<p>You might read it as, “the probability of observing $s_{t+1}$ by taking an action at a state”.</p>
 
-<h1 id="reference">Reference</h1>
+<div class="math-scroll">
+$$
+\begin{aligned}
+\nabla_\theta \log P(\tau^{(i)}; \theta) 
+&amp;= \nabla_\theta \log \left[ 
+\prod_{t=0}^{H} 
+\underbrace{P(s_{t+1}^{(i)} \mid s_t^{(i)}, u_t^{(i)})}_{\text{dynamics model}} 
+\cdot 
+\underbrace{\pi_\theta(u_t^{(i)} \mid s_t^{(i)})}_{\text{policy}} 
+\right] \\\\
+&amp;= \nabla_\theta \left[
+\sum_{t=0}^{H} \log P(s_{t+1}^{(i)} \mid s_t^{(i)}, u_t^{(i)}) 
++ 
+\sum_{t=0}^{H} \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)})
+\right] \\\\
+&amp;= \nabla_\theta 
+\sum_{t=0}^{H} \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)}) \\\\
+&amp;= \sum_{t=0}^{H} 
+\underbrace{
+\nabla_\theta \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)})
+}_{\text{no dynamics model required!!}}
+\end{aligned}
+$$
+</div>
 
-<p>david silver lecture</p>
+<p>Under parameterization of the policy, the dynamics model is cancelled out and the utility function solely depends on policy and reward function.</p>
 
-<p>sutton</p>
+<p>The gradient tries to increase probability of paths with positive $R$, and vice versa.</p>
 
-<p>value improvement path</p>
+<p>However, the high variance of the observed rewards $R$ leads to high variance in policy gradient, making it unstable.</p>
+
+<p>To solve this, baseline $b$ is introduced, lowering the variance but making the gradient estimator  still unbiased.</p>
+
+<p>Improving from constant baseline substraction, value function is adopted and actor-critic methods emerged, GAE, TRPO and PPO, so on.</p>
+
+<p>Other post will talk about TRPO.</p>
+
+<hr />
+
+<p><strong>References</strong></p>
+
+<ul>
+  <li><a href="https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI">Pieter Abbeel’s lecture</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Utility_maximization_problem">Wikipedia - Utility maximization problem</a></li>
+  <li><a href="https://link.springer.com/content/pdf/10.1007/BF00992696.pdf">REINFORCE, Williams (1992)</a></li>
+</ul>
 
   </article>
 

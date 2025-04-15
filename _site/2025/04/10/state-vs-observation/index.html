@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Policy gradient</title>
+    <title>State vs Observation in RL</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Machine Learning Engineer">
-    <link rel="canonical" href="http://localhost:4000/2025/04/10/policy-gradient/">
+    <link rel="canonical" href="http://localhost:4000/2025/04/10/state-vs-observation/">
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Anthony W. Jung posts" />
 
     <!-- Custom CSS -->
@@ -70,103 +70,30 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>Policy gradient</h1>
+    <h1>State vs Observation in RL</h1>
     <p class="meta">Apr 10, 2025</p>
   </header>
 
   <article class="post-content">
-  <p>Pieter Abbeel is such a great teacher.</p>
+  <p>I want to distinguish the words “state” and “observation”.</p>
 
-<p><a href="https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI">Video</a></p>
+<p>State can only be observed by an oracle, that fully describes the world with complete knowledge.</p>
 
-<p>We consider utility $U(\theta)$, dynamics $P$, reward $R$ and trajectories $\tau \in \mathcal D$.</p>
+<p>However, the sensory input to agent is “the observation of a state”, which may only contain partial information.</p>
 
-<p>Policy gradient aims to maximize the utility, under (semi-)supervision of reward.</p>
+<p>A good example of state being equal to observation is games like chess, where the positions of pieces are complete enough for winning. You don’t need chess board’s thickness to win the game.</p>
 
-\[U(\theta) = \sum_{\tau} P(\tau; \theta)\, R(\tau)\]
+<p>Hoever, many real-world scenarios the state cannot be observed, and in oracle perspective, cannot be even defined. (First principles can be broken!)</p>
 
-<blockquote>
-  <p>In microeconomics, the utility maximization problem is the problem consumers face: “How should I 
-spend my money in order to maximize my utility?” It is a type of optimal decision problem.</p>
-</blockquote>
+<p>Camera sensors outputs occluded images from 2D projection.</p>
 
-<p>Dynamics describe how the world will change, given previous state and action.</p>
+<p>Trading bot using fundamentals, indicators and order books cannot fully encode the market with exogenous variables like Trump’s and Elon’s tweets. — but according to efficient-market hypothesis (all information is summarized into asset price) and using infinite-width neural network (universal approximation theorem), can we recontruct features solely from asset price?</p>
 
-<p>It can be any dynamics such as classical mechanics, fluid dynamics, ecnomics, etc, but oftentimes, the real-world is more complex than simple lines of abstract equations.</p>
+<p>Therefore, we resort to experssivity and generalization capability of deep models to find approximately optimal solution with observations. (My other post talks about function approximation in RL)</p>
 
-<p>Vanilla policy gradient is free from the model (dynamics) of the world, as dervied below.</p>
+<p>The designer should carefully choose the observation space, which should sufficiently describe the state.</p>
 
-<p>Taking the gradient w.r.t. $\theta$ gives :</p>
-
-\[\begin{aligned}
-\nabla_\theta U(\theta) &amp;= \nabla_\theta \sum_{\tau} P(\tau; \theta) R(\tau) \\\\
-&amp;= \sum_{\tau} \nabla_\theta P(\tau; \theta) R(\tau) \\\\
-&amp;= \sum_{\tau} \frac{P(\tau; \theta)}{P(\tau; \theta)} \nabla_\theta P(\tau; \theta) R(\tau) \\\\
-&amp;= \sum_{\tau} P(\tau; \theta) \frac{\nabla_\theta P(\tau; \theta)}{P(\tau; \theta)} R(\tau) \\\\
-&amp;= \sum_{\tau} P(\tau; \theta) \nabla_\theta \log P(\tau; \theta) R(\tau)
-\end{aligned}\]
-
-<p>Approximate with the empirical estimate for $m$ sample paths under policy $\pi_\theta$ :</p>
-
-<div class="math-scroll">
-$$
-\nabla_\theta U(\theta) \approx \hat{g} = \frac{1}{m} \sum_{i=1}^m \nabla_\theta \log P(\tau^{(i)}; \theta) R(\tau^{(i)})
-$$
-</div>
-
-<p>The average is Monte-carlo estimation, and practically, single sample $m=1$ is used.</p>
-
-<p>Introducing the concept of “control”, i.e. action under stochastic policy $\pi$, we can decompse trajectory into state $s$ and action $u$.</p>
-
-<p>You might read it as, “the probability of observing $s_{t+1}$ by taking an action at a state”.</p>
-
-<div class="math-scroll">
-$$
-\begin{aligned}
-\nabla_\theta \log P(\tau^{(i)}; \theta) 
-&amp;= \nabla_\theta \log \left[ 
-\prod_{t=0}^{H} 
-\underbrace{P(s_{t+1}^{(i)} \mid s_t^{(i)}, u_t^{(i)})}_{\text{dynamics model}} 
-\cdot 
-\underbrace{\pi_\theta(u_t^{(i)} \mid s_t^{(i)})}_{\text{policy}} 
-\right] \\\\
-&amp;= \nabla_\theta \left[
-\sum_{t=0}^{H} \log P(s_{t+1}^{(i)} \mid s_t^{(i)}, u_t^{(i)}) 
-+ 
-\sum_{t=0}^{H} \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)})
-\right] \\\\
-&amp;= \nabla_\theta 
-\sum_{t=0}^{H} \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)}) \\\\
-&amp;= \sum_{t=0}^{H} 
-\underbrace{
-\nabla_\theta \log \pi_\theta(u_t^{(i)} \mid s_t^{(i)})
-}_{\text{no dynamics model required!!}}
-\end{aligned}
-$$
-</div>
-
-<p>Under parameterization of the policy, the dynamics model is cancelled out and the utility function solely depends on policy and reward function.</p>
-
-<p>The gradient tries to increase probability of paths with positive $R$, and vice versa.</p>
-
-<p>However, the high variance of the observed rewards $R$ leads to high variance in policy gradient, making it unstable.</p>
-
-<p>To solve this, baseline $b$ is introduced, lowering the variance but making the gradient estimator  still unbiased.</p>
-
-<p>Improving from constant baseline substraction, value function is adopted and actor-critic methods emerged, GAE, TRPO and PPO, so on.</p>
-
-<p>Other post will talk about TRPO.</p>
-
-<hr />
-
-<p><strong>References</strong></p>
-
-<ul>
-  <li><a href="https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI">Pieter Abbeel’s lecture</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Utility_maximization_problem">Wikipedia - Utility maximization problem</a></li>
-  <li><a href="https://link.springer.com/content/pdf/10.1007/BF00992696.pdf">REINFORCE, Williams (1992)</a></li>
-  <li><a href="http://joschu.net/docs/thesis.pdf">John Schulman’s thesis</a></li>
-</ul>
+<p>Applying RL to various problems and making it work, required me to do in-depth discussion with domain experts, spending much time on formulation of the problem (ideally Markovian), developing the RL environment and feature engineering, rather than fancy algorithms.</p>
 
   </article>
 

@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "My failure log"
 excerpt: "It's hard to digest that I've failed. These are fragments from years past—a reflection I hope turns out to be meaningful progress."
-date: 2025-04-09 18:00:00
+date: 2025-04-10 18:00:00
 mathjax: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Policy gradient"
 excerpt: "Don't ever forget about policy gradient."
-date:   2025-04-09 15:00:00
+date:   2025-04-10 17:00:00
 mathjax: true
 ---
 Pieter Abbeel is such a great teacher.
@@ -97,4 +97,3 @@ Other post will talk about TRPO.
 - [Pieter Abbeel's lecture](https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI)
 - [Wikipedia - Utility maximization problem](https://en.wikipedia.org/wiki/Utility_maximization_problem)
 - [REINFORCE, Williams (1992)](https://link.springer.com/content/pdf/10.1007/BF00992696.pdf)
-- [John Schulman's thesis](http://joschu.net/docs/thesis.pdf)

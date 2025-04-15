@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 12 Apr 2025 21:50:42 +0900</pubDate>
-    <lastBuildDate>Sat, 12 Apr 2025 21:50:42 +0900</lastBuildDate>
+    <pubDate>Tue, 15 Apr 2025 23:30:47 +0900</pubDate>
+    <lastBuildDate>Tue, 15 Apr 2025 23:30:47 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -205,105 +205,9 @@
   &lt;li&gt;I left the team&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2025/04/10/my-failure-log/</link>
-        <guid isPermaLink="true">http://localhost:4000/2025/04/10/my-failure-log/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>What is the definition of existence?</title>
-        <description>&lt;p&gt;I’m not a regular book reader,&lt;/p&gt;
-
-&lt;p&gt;but the book I read around age 13 made me think about&lt;/p&gt;
-
-&lt;p&gt;“What does it mean that something exists?”&lt;/p&gt;
-
-&lt;p&gt;I came up with this funny idea,&lt;/p&gt;
-
-&lt;p&gt;“Saying something ‘doesn’t exist’ is kind of falsy — because non-existence already implies that it exists as a concept.”&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/what-is-existence/image.png&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;by Peter Kröning&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.de/Genies-k%C3%B6nnen-irren-Peter-Kr%C3%B6ning/dp/3784429025&quot;&gt;text&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Can be translated as Errors and Serendipity in the History of Science&lt;/p&gt;
-
-&lt;p&gt;Heigenberg, uncertainty principle&lt;/p&gt;
-
-&lt;p&gt;Religion&lt;/p&gt;
-
-&lt;p&gt;Movie contact&lt;/p&gt;
-</description>
-        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2025/04/10/what-is-existence/</link>
-        <guid isPermaLink="true">http://localhost:4000/2025/04/10/what-is-existence/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Function approximation in Q learning</title>
-        <description>&lt;p&gt;Q. Is RL guaranteed to find optimal policy and value function? The discrepancy between tabular methods and function approximation.&lt;/p&gt;
-
-&lt;p&gt;For any finite Markov decision process, Q-learning finds an optimal policy.&lt;/p&gt;
-
-&lt;p&gt;Q-learning is off-policy TD control (Sarsa is on-policy TD control)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/optimality-of-q/image 1.png&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Policy evaluation : Estimate $v_{\pi}(s)$&lt;/li&gt;
-  &lt;li&gt;Policy improvement : Generate $\pi’ \geq \pi$&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/optimality-of-q/image.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;$\hat{v}(s; \theta) \approx v_\pi(s)$&lt;/p&gt;
-
-&lt;p&gt;The Bellman equation is linear equation that can be solved directly, but only for small state space.&lt;/p&gt;
-
-\[\begin{aligned}
-v &amp;amp;= R + \gamma P v \\\\
-(I - \gamma P) v &amp;amp;= R \\\\
-v &amp;amp;= (I - \gamma P)^{-1} R
-\end{aligned}\]
-
-&lt;p&gt;Updates :&lt;/p&gt;
-
-&lt;p&gt;Monte Carlo  : $S_t \mapsto G_t$,&lt;/p&gt;
-
-&lt;p&gt;TD(0) : $S_t \mapsto R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t)$&lt;/p&gt;
-
-&lt;p&gt;$n$-step TD : $S_t \mapsto G_{t:t+n}$&lt;/p&gt;
-
-&lt;p&gt;DP : $s \mapsto \mathbb{E}_\pi \left[ R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t) \mid S_t = s \right]$&lt;/p&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
-&lt;p&gt;david silver lecture&lt;/p&gt;
-
-&lt;p&gt;sutton&lt;/p&gt;
-
-&lt;p&gt;value improvement path&lt;/p&gt;
-</description>
-        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2025/04/10/optimality-of-q/</link>
-        <guid isPermaLink="true">http://localhost:4000/2025/04/10/optimality-of-q/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Most of the deep RL algorithms are TD(0)</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/td/image.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2025/04/10/TD/</link>
-        <guid isPermaLink="true">http://localhost:4000/2025/04/10/TD/</guid>
+        <pubDate>Fri, 11 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/11/my-failure-log/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/11/my-failure-log/</guid>
         
         
       </item>
@@ -400,12 +304,273 @@ $$
   &lt;li&gt;&lt;a href=&quot;https://youtu.be/AKbX1Zvo7r8?si=kZHp5nD0VLhF8yHI&quot;&gt;Pieter Abbeel’s lecture&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Utility_maximization_problem&quot;&gt;Wikipedia - Utility maximization problem&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/BF00992696.pdf&quot;&gt;REINFORCE, Williams (1992)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://joschu.net/docs/thesis.pdf&quot;&gt;John Schulman’s thesis&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 10 Apr 2025 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2025/04/10/policy-gradient/</link>
-        <guid isPermaLink="true">http://localhost:4000/2025/04/10/policy-gradient/</guid>
+        <pubDate>Fri, 11 Apr 2025 02:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/11/policy-gradient/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/11/policy-gradient/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Function approximation and representation learning in RL</title>
+        <description>&lt;!-- You have went through Sutton&apos;s book, but can you answer,  --&gt;
+
+&lt;p&gt;Is Q learning guaranteed to find optimal policy?&lt;/p&gt;
+
+&lt;p&gt;The answer is, yes, Q-learning finds an optimal policy for any finite Markov decision process. (Finite state, action and rewards sets, not finite episode.)&lt;/p&gt;
+
+&lt;p&gt;But for deep Q learning, the answer is no, partly due to function approximation, known as one of the “deadly triad”.&lt;/p&gt;
+
+&lt;!-- Furthermore, people don&apos;t strictly formulate their problem as Markovian but apply deep RL. --&gt;
+
+&lt;!-- But did you truely formulate your problem as &quot;finite&quot; &quot;Markov&quot; decision process? --&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The heart of RL lies in learning value function, recursively defined by Bellman equation.&lt;/p&gt;
+
+&lt;p&gt;The Bellman equation is linear equation that can be solved directly (closed form).&lt;/p&gt;
+
+&lt;p&gt;Consider matrix form :&lt;/p&gt;
+
+\[\begin{aligned}
+V &amp;amp;= R + \gamma P V \\\\
+(I - \gamma P) V &amp;amp;= R \\\\
+V &amp;amp;= (I - \gamma P)^{-1} R
+\end{aligned}\]
+
+&lt;!-- (Dynamic programming) --&gt;
+
+&lt;p&gt;However, this requires dynamics model $P$, and full sweep of $s \in S$.&lt;/p&gt;
+
+&lt;p&gt;For control problems, we consider Q function,&lt;/p&gt;
+
+\[V_*(s)=max_a Q_*(s,a)\]
+
+&lt;p&gt;Q function can be described by a table, for example :&lt;/p&gt;
+
+\[\begin{array}{c|ccc}
+\text{State} \backslash \text{Action} &amp;amp; a_0 &amp;amp; a_1 \\
+\hline
+s_0 &amp;amp; Q(s_0, a_0) &amp;amp; Q(s_0, a_1) \\
+s_1 &amp;amp; Q(s_1, a_0) &amp;amp; Q(s_1, a_1) \\
+\end{array}\]
+
+&lt;p&gt;In real-world cases, the rows of Q table grows enormously.&lt;/p&gt;
+
+&lt;p&gt;Consider the game of Go (바둑), where the board has 19 x 19 positions and three stone types: empty, black, white. It yields $|S|=3^{19 \times 19} \approx 2 \times 10^{170}$ states. (Atoms of universe is considered $10^{80}$)&lt;/p&gt;
+
+&lt;p&gt;Therefore, we seek to find an approximation to Q function, such as in DQN : $Q(s,a) \approx \hat{Q}_\theta(\phi (s),a)$.&lt;/p&gt;
+
+&lt;p&gt;(Please refer to my other post for TD and Bellman equation.)&lt;/p&gt;
+
+&lt;p&gt;Deep model $f_{\phi}$ is widely used as encoder (feature extractor),&lt;/p&gt;
+
+&lt;p&gt;but how do we determine the ideal representational capacity?, i.e., how large should the network be?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Representation Learning&lt;/strong&gt; – directly taken from value-improvement path. I really really like the Figure 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/optimality-of-q/image.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- $\hat{v}(s; \theta) \approx v_\pi(s)$ --&gt;
+
+&lt;p&gt;Usually, the state-action space $S \times A$ is too big to allow for an explicit representation of the functions $Q^\pi$, so one must resort to an approximation $\hat{Q}^\pi$.&lt;/p&gt;
+
+&lt;p&gt;A common approach is to parametrize:&lt;/p&gt;
+
+\[\hat{Q}^\pi(s, a) = \phi(s)^\top \theta_a,\]
+
+&lt;p&gt;where $\phi : S \rightarrow \mathbb{R}^K$ are features, $\theta_a \in \mathbb{R}^K$ are modifiable parameters associated with each $a \in A$, and $K \in \mathbb{N}$.&lt;/p&gt;
+
+&lt;p&gt;Given a set of (possibly non-linear) features $\phi : S \rightarrow \mathbb{R}^K$, policy evaluation comes down to computing the linear weights $(\theta_a \mid a \in A)$ such that $\hat{Q}^\pi \approx Q^\pi$.&lt;/p&gt;
+
+&lt;p&gt;This involves the projection of the Bellman operator onto the space spanned by $\phi$, denoted:&lt;/p&gt;
+
+\[\Pi_\Phi T^\pi Q^\pi \quad \text{for } \Phi = \langle \phi \rangle := \text{Span}(\{\phi^\pi_1, \ldots, \phi^\pi_K\}).\]
+
+&lt;p&gt;The problem of constructing the basis functions $\phi$ is known as &lt;strong&gt;representation learning&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Generally, $K \ll |S|$, so for a fixed $\phi$, the space of expressible value functions is much smaller than the space of all possible value functions.&lt;/p&gt;
+
+&lt;p&gt;Intuitively, then, a well-trained map $\phi$ should be such that $\phi(s)$ captures the salient information of $s \in S$ for return.&lt;/p&gt;
+
+&lt;p&gt;As long as the network has sufficient representational capacity, given enough training experience the learned representation $\phi(s)$ will be able to approximate a policy’s value function arbitrarily well.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I’ve been focusing on the weight dynamics of deep RL.&lt;/p&gt;
+
+&lt;!-- A linear transformation is characterized by eigenvalue and eigenvector, and eigenvector implies the direction and eigenvalue implies the strength to that direction. --&gt;
+
+&lt;p&gt;Consider rank, the number of independent bases, and magnitude $|| \cdot ||$ of representation $\Phi$.&lt;/p&gt;
+
+&lt;p&gt;As seen in Figure 1., the representation itself moves in deep RL.&lt;/p&gt;
+
+&lt;p&gt;The encoder of an agent should remain “plastic” during training process, s.t. it is able to learn unseen observations by keeping important features $\phi_i$ and discarding unimportant features $\phi_j$.&lt;/p&gt;
+
+&lt;p&gt;But the encoder might be overfitted to early experiences collected and be unable to learn from new experiences. The phenomena is called “loss of plasticity”.&lt;/p&gt;
+
+&lt;p&gt;This problem is important considering the recent trend of utilizing pre-trained model (so-called foundation model) as encoder for decision layers.&lt;/p&gt;
+
+&lt;p&gt;I hypothesized that given overparameterized encoder $f_{\phi}$, the rank should adaptively change so that the representation learnt is low-rank solution.&lt;/p&gt;
+
+&lt;p&gt;But what if we preserve the rank to fully utilize the capacity. For example we might promote the weight to preserve orthogonality by adding regularization term $||{\Phi}^T {\Phi} - I||$. However, this is computationally expensive, so I’m searching for other method to fully utilize the capacity given.&lt;/p&gt;
+
+&lt;!-- The magnitude of weight is already well-studied through literatures like weight regularization or normalization. For normalization, I had this question &quot;can&apos;t we track the weight magnitude somehow?&quot;.
+
+&lt;img src=&quot;/assets/optimality-of-q/image-1.png&quot; width=&quot;25%&quot; /&gt; --&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;david silver lecture&lt;/p&gt;
+
+&lt;p&gt;sutton&lt;/p&gt;
+
+&lt;p&gt;value improvement path&lt;/p&gt;
+
+&lt;p&gt;continual backprop&lt;/p&gt;
+
+&lt;p&gt;SimBa V2&lt;/p&gt;
+</description>
+        <pubDate>Fri, 11 Apr 2025 02:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/11/optimality-of-q/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/11/optimality-of-q/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>State vs Observation in RL</title>
+        <description>&lt;p&gt;I want to distinguish the words “state” and “observation”.&lt;/p&gt;
+
+&lt;p&gt;State can only be observed by an oracle, that fully describes the world with complete knowledge.&lt;/p&gt;
+
+&lt;p&gt;However, the sensory input to agent is “the observation of a state”, which may only contain partial information.&lt;/p&gt;
+
+&lt;p&gt;A good example of state being equal to observation is games like chess, where the positions of pieces are complete enough for winning. You don’t need chess board’s thickness to win the game.&lt;/p&gt;
+
+&lt;p&gt;Hoever, many real-world scenarios the state cannot be observed, and in oracle perspective, cannot be even defined. (First principles can be broken!)&lt;/p&gt;
+
+&lt;p&gt;Camera sensors outputs occluded images from 2D projection.&lt;/p&gt;
+
+&lt;p&gt;Trading bot using fundamentals, indicators and order books cannot fully encode the market with exogenous variables like Trump’s and Elon’s tweets. — but according to efficient-market hypothesis (all information is summarized into asset price) and using infinite-width neural network (universal approximation theorem), can we recontruct features solely from asset price?&lt;/p&gt;
+
+&lt;p&gt;Therefore, we resort to experssivity and generalization capability of deep models to find approximately optimal solution with observations. (My other post talks about function approximation in RL)&lt;/p&gt;
+
+&lt;p&gt;The designer should carefully choose the observation space, which should sufficiently describe the state.&lt;/p&gt;
+
+&lt;p&gt;Applying RL to various problems and making it work, required me to do in-depth discussion with domain experts, spending much time on formulation of the problem (ideally Markovian), developing the RL environment and feature engineering, rather than fancy algorithms.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/state-vs-observation/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/state-vs-observation/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Can we trust math?</title>
+        <description>&lt;p&gt;Thoughts I had in my early twenties.&lt;/p&gt;
+
+&lt;p&gt;When I was just a freshman in university, I was learning (memorizing for exams actually) various axioms in mathematics, including Euclidean geometry.&lt;/p&gt;
+
+&lt;p&gt;The postulated definition of “straight line” that the two ends never meet, is broken in spherical geometry.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/what-is-existence/image2.png&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Is science bounded by the axioms human have built?&lt;/p&gt;
+
+&lt;p&gt;Can we even trust math?&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/can-we-trust-math/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/can-we-trust-math/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[Editing] From TRPO to PPO</title>
+        <description>&lt;p&gt;Mixture of policy, Langford&lt;/p&gt;
+
+&lt;p&gt;KL, TRPO&lt;/p&gt;
+
+&lt;p&gt;clip, PPO&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/trpo/image.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://joschu.net/docs/thesis.pdf&quot;&gt;John Schulman’s thesis&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jonathan-hui.medium.com/rl-trust-region-policy-optimization-trpo-explained-a6ee04eeeee9&quot;&gt;TRPO medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/TRPO/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/TRPO/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[Editing] Most of the deep RL algorithms are TD</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/td/image.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Updates :&lt;/p&gt;
+
+&lt;p&gt;Monte Carlo  : $S_t \mapsto G_t$,&lt;/p&gt;
+
+&lt;p&gt;TD(0) : $S_t \mapsto R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t)$&lt;/p&gt;
+
+&lt;p&gt;$n$-step TD : $S_t \mapsto G_{t:t+n}$&lt;/p&gt;
+
+&lt;p&gt;DP : $s \mapsto \mathbb{E}_\pi \left[ R_{t+1} + \gamma \hat{v}(S_{t+1}, \mathbf{w}_t) \mid S_t = s \right]$&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;An operator is generally a mapping of function to function.&lt;/p&gt;
+
+\[TV = R + \gamma PV\]
+
+&lt;p&gt;Bellman operator  $T$ maps (updates) $V_t$ to $V_{t+1}$ by solving the recursive relationship.&lt;/p&gt;
+
+&lt;p&gt;As a relief, under complete metric space, 
+applying $T$ repeatedly converges to unique solution at linear rate of $\gamma$, 
+i.e. contraction mapping theorem, $||T(u)-T(v)||_{\infty} \leq \gamma ||u-v||_{\infty}$.&lt;/p&gt;
+
+&lt;p&gt;(Model-free, temporal difference, sample-based)&lt;/p&gt;
+
+&lt;p&gt;Temporal difference (TD) – literally, “temporal” difference between $t+1$ and $t$.&lt;/p&gt;
+
+\[Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left[ \textcolor{red}{r_{t+1} + \gamma \max_a Q(s_{t+1}, a)} - Q(s_t, a_t) \right]\]
+
+&lt;p&gt;Analogously to “target” or label in supervised learning, TD “target” serves as a (semi-)supervision in Q learning.&lt;/p&gt;
+
+&lt;p&gt;TD target $r_{t+1} + \gamma \max_a Q(s_{t+1}, a)$ consists of : actual signal (label) $r_{t+1}$, estimation $\gamma \max_a Q(s_{t+1}, a)$.&lt;/p&gt;
+
+&lt;p&gt;Intuitively, Q function is updated by the error = (label + estimation) - (estimation); This is called “bootstrapping”; you estimate based on your estimation. c.f. Monte-Carlo method.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: gray&quot;&gt;I was once obsessed with reducing the volume of $|S \times A|$, specifically $|A|$, but was it correct approach?&lt;/span&gt;&lt;/p&gt;
+
+&lt;!-- 
+Q-learning is off-policy TD control (Sarsa is on-policy TD control)
+
+&lt;img src=&quot;/assets/optimality-of-q/image 1.png&quot; width=&quot;40%&quot; /&gt;
+
+* Policy evaluation : Estimate $v_{\pi}(s)$
+* Policy improvement : Generate $\pi&apos; \geq \pi$ --&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/TD/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/TD/</guid>
         
         
       </item>

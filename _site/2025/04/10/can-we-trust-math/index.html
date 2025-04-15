@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Anthony W. Jung</title>
+    <title>Can we trust math?</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Machine Learning Engineer">
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/2025/04/10/can-we-trust-math/">
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Anthony W. Jung posts" />
 
     <!-- Custom CSS -->
@@ -67,72 +67,78 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="home">
-  <!-- about -->
-  <div class="about">
-    <br>
-    <p>I'm interested in various aspects of ML, especialy RL, to solve important problems in the world.</p>
-    <br>
-    <p><a href="/assets/anthony_resume_rl.pdf" target="_blank">CV</a></p>
-    <br>
-  </div>
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Can we trust math?</h1>
+    <p class="meta">Apr 10, 2025</p>
+  </header>
+
+  <article class="post-content">
+  <p>Thoughts I had in my early twenties.</p>
+
+<p>When I was just a freshman in university, I was learning (memorizing for exams actually) various axioms in mathematics, including Euclidean geometry.</p>
+
+<p>The postulated definition of “straight line” that the two ends never meet, is broken in spherical geometry.</p>
+
+<p><img src="/assets/what-is-existence/image2.png" width="40%" /></p>
+
+<p>Is science bounded by the axioms human have built?</p>
+
+<p>Can we even trust math?</p>
+
+  </article>
+
+  <!-- mathjax -->
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
   
-  <br>
-  <ul class="posts">
-    
-      <li>
-        <span class="post-date">Apr 11, 2025</span>
-        <a class="post-link" href="/2025/04/11/my-failure-log/">My failure log</a>
-        <br>
-        It's hard to digest that I've failed. These are fragments from years past—a reflection I hope turns out to be meaningful progress.
-      </li>
-    
-      <li>
-        <span class="post-date">Apr 11, 2025</span>
-        <a class="post-link" href="/2025/04/11/policy-gradient/">Policy gradient</a>
-        <br>
-        Don't ever forget about policy gradient.
-      </li>
-    
-      <li>
-        <span class="post-date">Apr 11, 2025</span>
-        <a class="post-link" href="/2025/04/11/optimality-of-q/">Function approximation and representation learning in RL</a>
-        <br>
-        The discrepancy between linear RL and deep RL, and intuitive understanding of representation in RL.
-      </li>
-    
-      <li>
-        <span class="post-date">Apr 10, 2025</span>
-        <a class="post-link" href="/2025/04/10/state-vs-observation/">State vs Observation in RL</a>
-        <br>
-        
-      </li>
-    
-      <li>
-        <span class="post-date">Apr 10, 2025</span>
-        <a class="post-link" href="/2025/04/10/can-we-trust-math/">Can we trust math?</a>
-        <br>
-        
-      </li>
-    
-      <li>
-        <span class="post-date">Apr 10, 2025</span>
-        <a class="post-link" href="/2025/04/10/TRPO/">[Editing] From TRPO to PPO</a>
-        <br>
-        Many people use PPO without understanding it, but that's why it's such a good algorithm.
-      </li>
-    
-      <li>
-        <span class="post-date">Apr 10, 2025</span>
-        <a class="post-link" href="/2025/04/10/TD/">[Editing] Most of the deep RL algorithms are TD</a>
-        <br>
-        
-      </li>
-    
-  </ul>
+  
+  <!-- disqus comments -->
+ 
+ <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'anthony-github-io'; // required: replace example with your forum shortname
 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  <style>
+    #disqus_thread {
+      transform: scale(0.85);          /* shrink the whole Disqus UI */
+      transform-origin: top center;    /* align scaling */
+      width: 100%;
+      margin-top: 30px;
+    }
+  
+    /* Optional: tighten spacing above/below */
+    .post-content {
+      margin-bottom: 20px;
+    }
+  </style>
 </div>
-
       </div>
     </div>
 
