@@ -124,21 +124,25 @@ I hypothesized that given overparameterized encoder $f_{\phi}$, the rank should 
 
 But what if we preserve the rank to fully utilize the capacity. For example we might promote the weight to preserve orthogonality by adding regularization term $\|\|{\Phi}^T {\Phi} - I\|\|$. However, this is computationally expensive, so I'm searching for other method to fully utilize the capacity given.
 
+---
 
-<!-- The magnitude of weight is already well-studied through literatures like weight regularization or normalization. For normalization, I had this question "can't we track the weight magnitude somehow?".
+The magnitude of weight is already well-studied through literatures like weight regularization or normalization. For normalization, I had this question "can't we track the weight magnitude somehow?".
 
-<img src="/assets/optimality-of-q/image-1.png" width="25%" /> -->
+Below does not track the magnitude but instead, add an axis to express the magnitude on unit ball. What a brilliant idea!
+
+<img src="/assets/optimality-of-q/image-1.png" width="25%" />
 
 ---
 
 **Reference**
 
-david silver lecture
+* [Value improvement path](https://arxiv.org/abs/2006.02243)
 
-sutton 
+* [Continual backprop](https://www.nature.com/articles/s41586-024-07711-7)
 
-value improvement path
+* [Hyperspherical Normalization](https://arxiv.org/abs/2502.15280)
 
-continual backprop
+* [David Silver's lecture](https://www.youtube.com/playlist?list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-)
 
-SimBa V2
+* Sutton and Barto
+

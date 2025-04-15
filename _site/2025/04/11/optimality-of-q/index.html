@@ -180,23 +180,36 @@ s_1 &amp; Q(s_1, a_0) &amp; Q(s_1, a_1) \\
 
 <p>But what if we preserve the rank to fully utilize the capacity. For example we might promote the weight to preserve orthogonality by adding regularization term $||{\Phi}^T {\Phi} - I||$. However, this is computationally expensive, so I’m searching for other method to fully utilize the capacity given.</p>
 
-<!-- The magnitude of weight is already well-studied through literatures like weight regularization or normalization. For normalization, I had this question "can't we track the weight magnitude somehow?".
+<hr />
 
-<img src="/assets/optimality-of-q/image-1.png" width="25%" /> -->
+<p>The magnitude of weight is already well-studied through literatures like weight regularization or normalization. For normalization, I had this question “can’t we track the weight magnitude somehow?”.</p>
+
+<p>Below does not track the magnitude but instead, add an axis to express the magnitude on unit ball. What a brilliant idea!</p>
+
+<p><img src="/assets/optimality-of-q/image-1.png" width="25%" /></p>
 
 <hr />
 
 <p><strong>Reference</strong></p>
 
-<p>david silver lecture</p>
+<ul>
+  <li>
+    <p><a href="https://arxiv.org/abs/2006.02243">Value improvement path</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.nature.com/articles/s41586-024-07711-7">Continual backprop</a></p>
+  </li>
+  <li>
+    <p><a href="https://arxiv.org/abs/2502.15280">Hyperspherical Normalization</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.youtube.com/playlist?list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-">David Silver’s lecture</a></p>
+  </li>
+  <li>
+    <p>Sutton and Barto</p>
+  </li>
+</ul>
 
-<p>sutton</p>
-
-<p>value improvement path</p>
-
-<p>continual backprop</p>
-
-<p>SimBa V2</p>
 
   </article>
 

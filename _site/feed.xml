@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Apr 2025 23:30:47 +0900</pubDate>
-    <lastBuildDate>Tue, 15 Apr 2025 23:30:47 +0900</lastBuildDate>
+    <pubDate>Wed, 16 Apr 2025 00:01:46 +0900</pubDate>
+    <lastBuildDate>Wed, 16 Apr 2025 00:01:46 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -420,23 +420,36 @@ s_1 &amp;amp; Q(s_1, a_0) &amp;amp; Q(s_1, a_1) \\
 
 &lt;p&gt;But what if we preserve the rank to fully utilize the capacity. For example we might promote the weight to preserve orthogonality by adding regularization term $||{\Phi}^T {\Phi} - I||$. However, this is computationally expensive, so I’m searching for other method to fully utilize the capacity given.&lt;/p&gt;
 
-&lt;!-- The magnitude of weight is already well-studied through literatures like weight regularization or normalization. For normalization, I had this question &quot;can&apos;t we track the weight magnitude somehow?&quot;.
+&lt;hr /&gt;
 
-&lt;img src=&quot;/assets/optimality-of-q/image-1.png&quot; width=&quot;25%&quot; /&gt; --&gt;
+&lt;p&gt;The magnitude of weight is already well-studied through literatures like weight regularization or normalization. For normalization, I had this question “can’t we track the weight magnitude somehow?”.&lt;/p&gt;
+
+&lt;p&gt;Below does not track the magnitude but instead, add an axis to express the magnitude on unit ball. What a brilliant idea!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/optimality-of-q/image-1.png&quot; width=&quot;25%&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;david silver lecture&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/2006.02243&quot;&gt;Value improvement path&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.nature.com/articles/s41586-024-07711-7&quot;&gt;Continual backprop&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/2502.15280&quot;&gt;Hyperspherical Normalization&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-&quot;&gt;David Silver’s lecture&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sutton and Barto&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;sutton&lt;/p&gt;
-
-&lt;p&gt;value improvement path&lt;/p&gt;
-
-&lt;p&gt;continual backprop&lt;/p&gt;
-
-&lt;p&gt;SimBa V2&lt;/p&gt;
 </description>
         <pubDate>Fri, 11 Apr 2025 02:00:00 +0900</pubDate>
         <link>http://localhost:4000/2025/04/11/optimality-of-q/</link>
