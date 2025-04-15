@@ -18,3 +18,9 @@ The postulated definition of "straight line" that the two ends never meet, is br
 Is science bounded by the axioms human have built?
 
 Can we even trust math?
+
+---
+
+**References**
+
+* [Sphere Image](https://eschermath.org/wiki/File:Sphere-geodesic.jpg.html)

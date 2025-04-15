@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 16 Apr 2025 00:01:46 +0900</pubDate>
-    <lastBuildDate>Wed, 16 Apr 2025 00:01:46 +0900</lastBuildDate>
+    <pubDate>Wed, 16 Apr 2025 00:22:04 +0900</pubDate>
+    <lastBuildDate>Wed, 16 Apr 2025 00:22:04 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -390,7 +390,11 @@ s_1 &amp;amp; Q(s_1, a_0) &amp;amp; Q(s_1, a_1) \\
 
 &lt;p&gt;This involves the projection of the Bellman operator onto the space spanned by $\phi$, denoted:&lt;/p&gt;
 
-\[\Pi_\Phi T^\pi Q^\pi \quad \text{for } \Phi = \langle \phi \rangle := \text{Span}(\{\phi^\pi_1, \ldots, \phi^\pi_K\}).\]
+&lt;div class=&quot;math-scroll&quot;&gt;
+$$
+\Pi_\Phi T^\pi Q^\pi \quad \text{for } \Phi = \langle \phi \rangle := \text{Span}(\{\phi^\pi_1, \ldots, \phi^\pi_K\}).
+$$
+&lt;/div&gt;
 
 &lt;p&gt;The problem of constructing the basis functions $\phi$ is known as &lt;strong&gt;representation learning&lt;/strong&gt;.&lt;/p&gt;
 
@@ -500,6 +504,14 @@ s_1 &amp;amp; Q(s_1, a_0) &amp;amp; Q(s_1, a_1) \\
 &lt;p&gt;Is science bounded by the axioms human have built?&lt;/p&gt;
 
 &lt;p&gt;Can we even trust math?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eschermath.org/wiki/File:Sphere-geodesic.jpg.html&quot;&gt;Sphere Image&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
         <link>http://localhost:4000/2025/04/10/can-we-trust-math/</link>

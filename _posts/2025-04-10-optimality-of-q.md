@@ -92,9 +92,11 @@ Given a set of (possibly non-linear) features $\phi : S \rightarrow \mathbb{R}^K
 
 This involves the projection of the Bellman operator onto the space spanned by $\phi$, denoted:
 
+<div class="math-scroll">
 $$
 \Pi_\Phi T^\pi Q^\pi \quad \text{for } \Phi = \langle \phi \rangle := \text{Span}(\{\phi^\pi_1, \ldots, \phi^\pi_K\}).
 $$
+</div>
 
 The problem of constructing the basis functions $\phi$ is known as **representation learning**.
 
