@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 16 Apr 2025 01:17:51 +0900</pubDate>
-    <lastBuildDate>Wed, 16 Apr 2025 01:17:51 +0900</lastBuildDate>
+    <pubDate>Sat, 19 Apr 2025 15:47:31 +0900</pubDate>
+    <lastBuildDate>Sat, 19 Apr 2025 15:47:31 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -135,7 +135,7 @@
   &lt;li&gt;gathered anomaly transaction label from etherscan&lt;/li&gt;
   &lt;li&gt;Neo4j to deal with gigantic graph, dumped the chain and loaded into DB&lt;/li&gt;
   &lt;li&gt;study dynamics graph (Ethereum transaction), also refer to Uber’s dynamic graph&lt;/li&gt;
-  &lt;li&gt;how to sample from huge graph that, samples can cover mother population?&lt;/li&gt;
+  &lt;li&gt;how to sample from huge graph that, samples can well represent mother population?&lt;/li&gt;
   &lt;li&gt;Skill-based RL on mujoco,&lt;/li&gt;
   &lt;li&gt;studied state clusters during skill-based RL training&lt;/li&gt;
 &lt;/ul&gt;
@@ -541,6 +541,83 @@ $$
         <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
         <link>http://localhost:4000/2025/04/10/TRPO/</link>
         <guid isPermaLink="true">http://localhost:4000/2025/04/10/TRPO/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>[Editing] Overdetermined vs Overcomplete vs Overparameterized</title>
+        <description>&lt;div style=&quot;display: flex; flex-direction: column; gap: 40px; align-items: center;&quot;&gt;
+
+  &lt;!-- Underdetermined --&gt;
+  &lt;div style=&quot;display: flex; gap: 40px; align-items: center;&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Underdetermined&lt;/strong&gt;&lt;/p&gt;
+    &lt;div style=&quot;text-align: left;&quot;&gt;
+      
+      $$
+      \begin{aligned}
+      x + y + z &amp;amp;= 3 \\
+      x + y + 2z &amp;amp;= 4
+      \end{aligned}
+      $$
+    &lt;/div&gt;
+    &lt;div&gt;
+      $$
+      A|b = \left[\begin{array}{ccc|c}
+      1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 3 \\
+      1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 4
+      \end{array}\right]
+      $$
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Overdetermined --&gt;
+  &lt;div style=&quot;display: flex; gap: 40px; align-items: center;&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Overdetermined&lt;/strong&gt;&lt;/p&gt;
+    &lt;div style=&quot;text-align: left;&quot;&gt;
+      $$
+      \begin{aligned}
+      x + y &amp;amp;= 3 \\
+      x + 2y &amp;amp;= 7 \\
+      4x + 6y &amp;amp;= 21
+      \end{aligned}
+      $$
+    &lt;/div&gt;
+    &lt;div&gt;
+      $$
+      A|b = \left[\begin{array}{cc|c}
+      1 &amp;amp; 1 &amp;amp; 3 \\
+      1 &amp;amp; 2 &amp;amp; 7 \\
+      4 &amp;amp; 6 &amp;amp; 21
+      \end{array}\right]
+      $$
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;usually overdetermined
+more data (the number of equations) than features&lt;/p&gt;
+
+&lt;p&gt;representation + decision layer (linear regression)&lt;/p&gt;
+
+&lt;h3 id=&quot;overcompleteness&quot;&gt;Overcompleteness&lt;/h3&gt;
+
+&lt;p&gt;Formally, a subset of vectors $\{\phi_{i}\}_{i \in J}$ in a Banach space $X$, sometimes called a &lt;em&gt;system&lt;/em&gt;, is &lt;strong&gt;complete&lt;/strong&gt; if every element in $X$ can be approximated arbitrarily well in norm by finite linear combinations of elements in $\{\phi_{i}\}_{i \in J}$.&lt;/p&gt;
+
+&lt;p&gt;A system is called &lt;strong&gt;overcomplete&lt;/strong&gt; if it contains more vectors than necessary to be complete — that is, there exists some $\phi_{j} \in \{\phi_{i}\}_{i \in J}$ such that removing $\phi_{j}$ still leaves the system complete $\{\phi_{i}\}_{i \in J} \setminus \{\phi_j\}$ remains complete.&lt;/p&gt;
+
+&lt;p&gt;In research areas such as signal processing and function approximation, overcompleteness can help achieve more stable, robust, or compact representations than using a basis.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;wiki&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 10 Apr 2025 03:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2025/04/10/overparameterization/</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/04/10/overparameterization/</guid>
         
         
       </item>

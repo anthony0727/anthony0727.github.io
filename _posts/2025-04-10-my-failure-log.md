@@ -111,7 +111,7 @@ mathjax: true
 - gathered anomaly transaction label from etherscan
 - Neo4j to deal with gigantic graph, dumped the chain and loaded into DB
 - study dynamics graph (Ethereum transaction), also refer to Uber’s dynamic graph
-- how to sample from huge graph that, samples can cover mother population?
+- how to sample from huge graph that, samples can well represent mother population?
 - Skill-based RL on mujoco, 
 - studied state clusters during skill-based RL training
 

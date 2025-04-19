@@ -13,16 +13,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
 
-    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HR4DCM714F"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-3698471-23', 'auto');
-      ga('send', 'pageview');
-    </script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-HR4DCM714F');
+    </script>
 </head>
 
 
@@ -199,7 +198,7 @@
   <li>gathered anomaly transaction label from etherscan</li>
   <li>Neo4j to deal with gigantic graph, dumped the chain and loaded into DB</li>
   <li>study dynamics graph (Ethereum transaction), also refer to Uber’s dynamic graph</li>
-  <li>how to sample from huge graph that, samples can cover mother population?</li>
+  <li>how to sample from huge graph that, samples can well represent mother population?</li>
   <li>Skill-based RL on mujoco,</li>
   <li>studied state clusters during skill-based RL training</li>
 </ul>

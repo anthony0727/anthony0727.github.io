@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Can we trust math?</title>
+    <title>[Editing] Overdetermined vs Overcomplete vs Overparameterized</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Machine Learning Engineer">
-    <link rel="canonical" href="http://localhost:4000/2025/04/10/can-we-trust-math/">
+    <link rel="canonical" href="http://localhost:4000/2025/04/10/overparameterization/">
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Anthony W. Jung posts" />
 
     <!-- Custom CSS -->
@@ -69,29 +69,77 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>Can we trust math?</h1>
+    <h1>[Editing] Overdetermined vs Overcomplete vs Overparameterized</h1>
     <p class="meta">Apr 10, 2025</p>
   </header>
 
   <article class="post-content">
-  <p>Thoughts I had in my early twenties.</p>
+  <div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
 
-<p>When I was just a freshman in university, I was learning (memorizing for exams actually) various axioms in mathematics, including Euclidean geometry.</p>
+  <!-- Underdetermined -->
+  <div style="display: flex; gap: 40px; align-items: center;">
+  <p><strong>Underdetermined</strong></p>
+    <div style="text-align: left;">
+      
+      $$
+      \begin{aligned}
+      x + y + z &amp;= 3 \\
+      x + y + 2z &amp;= 4
+      \end{aligned}
+      $$
+    </div>
+    <div>
+      $$
+      A|b = \left[\begin{array}{ccc|c}
+      1 &amp; 1 &amp; 1 &amp; 3 \\
+      1 &amp; 1 &amp; 2 &amp; 4
+      \end{array}\right]
+      $$
+    </div>
+  </div>
 
-<p>The postulated definition of “straight line” that the two ends never meet, is broken in spherical geometry.</p>
+  <!-- Overdetermined -->
+  <div style="display: flex; gap: 40px; align-items: center;">
+  <p><strong>Overdetermined</strong></p>
+    <div style="text-align: left;">
+      $$
+      \begin{aligned}
+      x + y &amp;= 3 \\
+      x + 2y &amp;= 7 \\
+      4x + 6y &amp;= 21
+      \end{aligned}
+      $$
+    </div>
+    <div>
+      $$
+      A|b = \left[\begin{array}{cc|c}
+      1 &amp; 1 &amp; 3 \\
+      1 &amp; 2 &amp; 7 \\
+      4 &amp; 6 &amp; 21
+      \end{array}\right]
+      $$
+    </div>
+  </div>
 
-<p><img src="/assets/what-is-existence/image2.png" width="40%" /></p>
+</div>
 
-<p>Is science bounded by the axioms human have built?</p>
+<p>usually overdetermined
+more data (the number of equations) than features</p>
 
-<p>Can we even trust math?</p>
+<p>representation + decision layer (linear regression)</p>
 
-<hr />
+<h3 id="overcompleteness">Overcompleteness</h3>
+
+<p>Formally, a subset of vectors $\{\phi_{i}\}_{i \in J}$ in a Banach space $X$, sometimes called a <em>system</em>, is <strong>complete</strong> if every element in $X$ can be approximated arbitrarily well in norm by finite linear combinations of elements in $\{\phi_{i}\}_{i \in J}$.</p>
+
+<p>A system is called <strong>overcomplete</strong> if it contains more vectors than necessary to be complete — that is, there exists some $\phi_{j} \in \{\phi_{i}\}_{i \in J}$ such that removing $\phi_{j}$ still leaves the system complete $\{\phi_{i}\}_{i \in J} \setminus \{\phi_j\}$ remains complete.</p>
+
+<p>In research areas such as signal processing and function approximation, overcompleteness can help achieve more stable, robust, or compact representations than using a basis.</p>
 
 <p><strong>References</strong></p>
 
 <ul>
-  <li><a href="https://eschermath.org/wiki/File:Sphere-geodesic.jpg.html">Sphere Image</a></li>
+  <li>wiki</li>
 </ul>
 
   </article>
