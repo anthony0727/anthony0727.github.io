@@ -20,7 +20,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-CP80GRPEPM');
+      gtag('config', 'G-HR4DCM714F');
     </script>
 </head>
 
@@ -74,7 +74,58 @@
   </header>
 
   <article class="post-content">
-  <p>Mixture of policy, Langford</p>
+  <p>Consider a policy improvement :</p>
+
+\[V_{\pi_{new}} \geq V_{\pi_{old}}\]
+
+<!-- 1. Policy iteration's full width backup (dynamic programming) is infeasible due to huge state space.
+2. Greedy policy, i.e. argmax policy, might update the policy too abruptly. -->
+
+<p>Instead of “direct” policy gradient, we do approximately optimal PG.</p>
+
+<p>does the algo. guarantee improvement?</p>
+
+<p>how much (measure) will it improve?</p>
+
+<p>local approximation</p>
+
+<p>One can easily come up with “conservative” update; improve the policy, but also preserve old policy. unlikely states which might be globally good</p>
+
+<p>mixture of old policy $\pi_{old}$ and possible policy $\pi’$ :</p>
+
+\[\pi_{new} = (1 - \alpha) \pi_{old} + \alpha \pi'\]
+
+<p>you can rewrite as :</p>
+
+\[\pi_{new} = \pi_{old} + \alpha (\pi' - \pi_{old})\]
+
+<p>update the old policy toward some policy with strength of alpha</p>
+
+<p>결국, you want to measure the distance between pi1 and pi2</p>
+
+<p>stochastic policy, total variation to KL</p>
+
+<p>importance sampling</p>
+
+<p>In Kakade et al. a lower bound for this mixture policy is provided.</p>
+
+<p>instead of direct PG, we maximize this lower bound, also called surrogate loss. monotonic improvement</p>
+
+<p>visitation frequency</p>
+
+\[\begin{align}
+\eta(\tilde{\pi}) &amp;= \eta(\pi) + \sum_{s} \rho^{\textcolor{red}{\tilde{\pi}}}(s) \sum_{a} \tilde{\pi}(a \mid s) A^{\pi}(s, a) \\
+
+L_{\pi}(\tilde{\pi}) &amp;= \eta(\pi) + \sum_{s} \rho^{\textcolor{red}{\pi}}(s) \sum_{a} \tilde{\pi}(a \mid s) A^{\pi}(s, a) \\
+\end{align}\]
+
+\[\eta(\tilde{\pi}) \geq L_{\pi}(\tilde{\pi}) + O(\alpha ^ 2)\]
+
+\[D_{TV}^2 \leq D_{KL}\]
+
+<!-- where $\pi'=\arg \max_{\pi'}L_{\pi_{old}}(\pi')$ -->
+
+<p>Importance sampling</p>
 
 <p>KL, TRPO</p>
 
@@ -86,6 +137,7 @@
 <p><strong>References</strong></p>
 
 <ul>
+  <li><a href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa09/readings/KakadeLangford-icml2002.pdf">Approximately optimal RL, lower bound, Kakade and Langford</a></li>
   <li><a href="http://joschu.net/docs/thesis.pdf">John Schulman’s thesis</a></li>
   <li><a href="https://jonathan-hui.medium.com/rl-trust-region-policy-optimization-trpo-explained-a6ee04eeeee9">TRPO medium</a></li>
 </ul>

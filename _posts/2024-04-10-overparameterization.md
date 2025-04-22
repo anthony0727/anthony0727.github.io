@@ -7,6 +7,12 @@ date: 2025-04-09 18:00:00
 mathjax: true
 ---
 
+Consider a linear system. Design matrix $A$ and observation $b$ are "known" and we solve for "unknown" $x$.
+
+$$
+b=Ax
+$$
+
 <div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
 
   <!-- Underdetermined -->
@@ -57,14 +63,19 @@ mathjax: true
 </div>
 
 
+Consider an encoder and a decision layer in deep learning.
 
+$$
+\hat{y}=ZW^\top
+$$
 
-usually overdetermined
-more data (the number of equations) than features
+Let the encoder be arbitrary nonlinear transformation $x \mapsto z = f_{\phi}(x)$. Given a dataset $X$, we have $Z \in \mathbb{R}^{n \times k}$, $n$ data points with $k$ features.
 
-representation + decision layer (linear regression)
+Let the decision layer be some linear transformation $W$, for example, single-task regression $W \in \mathbb{R}^{1 \times k}$, multi-class classification $W \in \mathbb{R}^{C \times k}$.
 
+With no assumption on consistency, usually the system is overdetermined, $n>k$, which means that we have more data points than features.
 
+$y$ and $Z$ is "known" and $W$ is "unknown". therefore we solve for "variable" $W$ and We seek to find good solution out of many solutions.
 
 ### Overcompleteness
 

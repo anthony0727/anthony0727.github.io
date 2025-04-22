@@ -5,8 +5,8 @@
     <description>Machine Learning Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 19 Apr 2025 15:55:07 +0900</pubDate>
-    <lastBuildDate>Sat, 19 Apr 2025 15:55:07 +0900</lastBuildDate>
+    <pubDate>Tue, 22 Apr 2025 15:59:07 +0900</pubDate>
+    <lastBuildDate>Tue, 22 Apr 2025 15:59:07 +0900</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -430,7 +430,7 @@ $$
 
 &lt;p&gt;Below does not track the magnitude but instead, add an axis to express the magnitude on unit ball. What a brilliant idea!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/optimality-of-q/image-1.png&quot; width=&quot;25%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/optimality-of-q/image-1.png&quot; width=&quot;30%&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -522,7 +522,58 @@ $$
     
       <item>
         <title>[Editing] From TRPO to PPO</title>
-        <description>&lt;p&gt;Mixture of policy, Langford&lt;/p&gt;
+        <description>&lt;p&gt;Consider a policy improvement :&lt;/p&gt;
+
+\[V_{\pi_{new}} \geq V_{\pi_{old}}\]
+
+&lt;!-- 1. Policy iteration&apos;s full width backup (dynamic programming) is infeasible due to huge state space.
+2. Greedy policy, i.e. argmax policy, might update the policy too abruptly. --&gt;
+
+&lt;p&gt;Instead of “direct” policy gradient, we do approximately optimal PG.&lt;/p&gt;
+
+&lt;p&gt;does the algo. guarantee improvement?&lt;/p&gt;
+
+&lt;p&gt;how much (measure) will it improve?&lt;/p&gt;
+
+&lt;p&gt;local approximation&lt;/p&gt;
+
+&lt;p&gt;One can easily come up with “conservative” update; improve the policy, but also preserve old policy. unlikely states which might be globally good&lt;/p&gt;
+
+&lt;p&gt;mixture of old policy $\pi_{old}$ and possible policy $\pi’$ :&lt;/p&gt;
+
+\[\pi_{new} = (1 - \alpha) \pi_{old} + \alpha \pi&apos;\]
+
+&lt;p&gt;you can rewrite as :&lt;/p&gt;
+
+\[\pi_{new} = \pi_{old} + \alpha (\pi&apos; - \pi_{old})\]
+
+&lt;p&gt;update the old policy toward some policy with strength of alpha&lt;/p&gt;
+
+&lt;p&gt;결국, you want to measure the distance between pi1 and pi2&lt;/p&gt;
+
+&lt;p&gt;stochastic policy, total variation to KL&lt;/p&gt;
+
+&lt;p&gt;importance sampling&lt;/p&gt;
+
+&lt;p&gt;In Kakade et al. a lower bound for this mixture policy is provided.&lt;/p&gt;
+
+&lt;p&gt;instead of direct PG, we maximize this lower bound, also called surrogate loss. monotonic improvement&lt;/p&gt;
+
+&lt;p&gt;visitation frequency&lt;/p&gt;
+
+\[\begin{align}
+\eta(\tilde{\pi}) &amp;amp;= \eta(\pi) + \sum_{s} \rho^{\textcolor{red}{\tilde{\pi}}}(s) \sum_{a} \tilde{\pi}(a \mid s) A^{\pi}(s, a) \\
+
+L_{\pi}(\tilde{\pi}) &amp;amp;= \eta(\pi) + \sum_{s} \rho^{\textcolor{red}{\pi}}(s) \sum_{a} \tilde{\pi}(a \mid s) A^{\pi}(s, a) \\
+\end{align}\]
+
+\[\eta(\tilde{\pi}) \geq L_{\pi}(\tilde{\pi}) + O(\alpha ^ 2)\]
+
+\[D_{TV}^2 \leq D_{KL}\]
+
+&lt;!-- where $\pi&apos;=\arg \max_{\pi&apos;}L_{\pi_{old}}(\pi&apos;)$ --&gt;
+
+&lt;p&gt;Importance sampling&lt;/p&gt;
 
 &lt;p&gt;KL, TRPO&lt;/p&gt;
 
@@ -534,6 +585,7 @@ $$
 &lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://people.eecs.berkeley.edu/~pabbeel/cs287-fa09/readings/KakadeLangford-icml2002.pdf&quot;&gt;Approximately optimal RL, lower bound, Kakade and Langford&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://joschu.net/docs/thesis.pdf&quot;&gt;John Schulman’s thesis&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://jonathan-hui.medium.com/rl-trust-region-policy-optimization-trpo-explained-a6ee04eeeee9&quot;&gt;TRPO medium&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -547,7 +599,11 @@ $$
     
       <item>
         <title>[Editing] Overdetermined vs Overcomplete vs Overparameterized</title>
-        <description>&lt;div style=&quot;display: flex; flex-direction: column; gap: 40px; align-items: center;&quot;&gt;
+        <description>&lt;p&gt;Consider a linear system. Design matrix $A$ and observation $b$ are “known” and we solve for “unknown” $x$.&lt;/p&gt;
+
+\[b=Ax\]
+
+&lt;div style=&quot;display: flex; flex-direction: column; gap: 40px; align-items: center;&quot;&gt;
 
   &lt;!-- Underdetermined --&gt;
   &lt;div style=&quot;display: flex; gap: 40px; align-items: center;&quot;&gt;
@@ -596,10 +652,17 @@ $$
 
 &lt;/div&gt;
 
-&lt;p&gt;usually overdetermined
-more data (the number of equations) than features&lt;/p&gt;
+&lt;p&gt;Consider an encoder and a decision layer in deep learning.&lt;/p&gt;
 
-&lt;p&gt;representation + decision layer (linear regression)&lt;/p&gt;
+\[\hat{y}=ZW^\top\]
+
+&lt;p&gt;Let the encoder be arbitrary nonlinear transformation $x \mapsto z = f_{\phi}(x)$. Given a dataset $X$, we have $Z \in \mathbb{R}^{n \times k}$, $n$ data points with $k$ features.&lt;/p&gt;
+
+&lt;p&gt;Let the decision layer be some linear transformation $W$, for example, single-task regression $W \in \mathbb{R}^{1 \times k}$, multi-class classification $W \in \mathbb{R}^{C \times k}$.&lt;/p&gt;
+
+&lt;p&gt;With no assumption on consistency, usually the system is overdetermined, $n&amp;gt;k$, which means that we have more data points than features.&lt;/p&gt;
+
+&lt;p&gt;$y$ and $Z$ is “known” and $W$ is “unknown”. therefore we solve for “variable” $W$ and We seek to find good solution out of many solutions.&lt;/p&gt;
 
 &lt;h3 id=&quot;overcompleteness&quot;&gt;Overcompleteness&lt;/h3&gt;
 

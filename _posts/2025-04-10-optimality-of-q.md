@@ -132,7 +132,7 @@ The magnitude of weight is already well-studied through literatures like weight 
 
 Below does not track the magnitude but instead, add an axis to express the magnitude on unit ball. What a brilliant idea!
 
-<img src="/assets/optimality-of-q/image-1.png" width="25%" />
+<img src="/assets/optimality-of-q/image-1.png" width="30%" />
 
 ---
 

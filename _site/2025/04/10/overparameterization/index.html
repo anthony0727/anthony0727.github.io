@@ -20,7 +20,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-CP80GRPEPM');
+      gtag('config', 'G-HR4DCM714F');
     </script>
 </head>
 
@@ -74,7 +74,11 @@
   </header>
 
   <article class="post-content">
-  <div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
+  <p>Consider a linear system. Design matrix $A$ and observation $b$ are “known” and we solve for “unknown” $x$.</p>
+
+\[b=Ax\]
+
+<div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
 
   <!-- Underdetermined -->
   <div style="display: flex; gap: 40px; align-items: center;">
@@ -123,10 +127,17 @@
 
 </div>
 
-<p>usually overdetermined
-more data (the number of equations) than features</p>
+<p>Consider an encoder and a decision layer in deep learning.</p>
 
-<p>representation + decision layer (linear regression)</p>
+\[\hat{y}=ZW^\top\]
+
+<p>Let the encoder be arbitrary nonlinear transformation $x \mapsto z = f_{\phi}(x)$. Given a dataset $X$, we have $Z \in \mathbb{R}^{n \times k}$, $n$ data points with $k$ features.</p>
+
+<p>Let the decision layer be some linear transformation $W$, for example, single-task regression $W \in \mathbb{R}^{1 \times k}$, multi-class classification $W \in \mathbb{R}^{C \times k}$.</p>
+
+<p>With no assumption on consistency, usually the system is overdetermined, $n&gt;k$, which means that we have more data points than features.</p>
+
+<p>$y$ and $Z$ is “known” and $W$ is “unknown”. therefore we solve for “variable” $W$ and We seek to find good solution out of many solutions.</p>
 
 <h3 id="overcompleteness">Overcompleteness</h3>
 
