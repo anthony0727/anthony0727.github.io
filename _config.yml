@@ -8,6 +8,10 @@ twitter_username: Anthony37709726
 github_username:  anthony0727
 linkedin_username: anthony0727
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
 # Build settings
 markdown: kramdown
