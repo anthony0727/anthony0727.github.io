@@ -157,7 +157,7 @@ mathjax: true
 - diffusion for control in PDE, also offline RL
 - re-submitted the SciML paper to ICLR, rejected
 - my co-author left the team
-- went to neurips and met Will Dabney and Marc G. Bellemere, I want to work with them so bad
+- went to neurips and met Will Dabney and Marc G. Bellemare, I want to work with them so bad
 - met great people including Hyungwon Chung, Kyunghyun Cho, could listen to their stories, and later on I found his "Don't teach. Incentivize." seminar. it gave me new perspective.
 - some progress on the extension of physics journal paper, thanks to the literature Will Dabney shared
 - found interesting work, SINDy-RL, Steve Brunton, very nice literature

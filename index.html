@@ -8,16 +8,32 @@ layout: default
     <br>
     <p>I'm interested in various aspects of ML, especialy RL, to solve important problems in the world.</p>
     <br>
-    <p>
-    <a href="/assets/anthony_resume_rl.pdf" download onclick="gtag('event', 'download_cv', {
-      'event_category': 'Download',
-      'event_label': 'CV',
-      'value': 1
-    });">CV</a>
-    </p>
-    <br>
   </div>
-  
+
+  <!-- path -->
+  <style>
+    .hpath{display:flex;align-items:flex-start;margin:8px 0 16px;overflow-x:auto}
+    .hnode{flex-shrink:0;text-align:center;width:110px}
+    .hnode .dot{width:6px;height:6px;background:#333;border-radius:50%;margin:0 auto 4px}
+    .hnode .yr{font-size:12px;font-weight:700;color:#333}
+    .hnode .wh{font-size:11px;color:#888;margin-top:2px;line-height:1.3}
+    .hedge{flex-shrink:0;width:20px;height:1px;background:#ccc;margin-top:3px}
+    @media(max-width:600px){.hnode{width:88px}.hedge{width:12px}}
+  </style>
+  <div class="hpath">
+    <div class="hnode"><div class="dot"></div><div class="yr">2015</div><div class="wh">became interested in<br>computational science</div></div>
+    <div class="hedge"></div>
+    <div class="hnode"><div class="dot"></div><div class="yr">2017</div><div class="wh">first deep learning study</div></div>
+    <div class="hedge"></div>
+    <div class="hnode"><div class="dot"></div><div class="yr">2020</div><div class="wh">started learning RL</div></div>
+    <div class="hedge"></div>
+    <div class="hnode"><div class="dot"></div><div class="yr">2022</div><div class="wh">beta tester for<br>the first ChatGPT</div></div>
+    <div class="hedge"></div>
+    <div class="hnode"><div class="dot"></div><div class="yr">2024</div><div class="wh">my first paper<br>published</div></div>
+    <div class="hedge"></div>
+    <div class="hnode"><div class="dot"></div><div class="yr">2024</div><div class="wh">met my idols<br>at NeurIPS</div></div>
+  </div>
+
   <br>
   <ul class="posts">
     {% for post in site.posts %}

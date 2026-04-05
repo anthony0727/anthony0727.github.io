@@ -60,7 +60,7 @@ $$
 
 In real-world cases, the rows of Q table grows enormously.
 
-Consider the game of Go (바둑), where the board has 19 x 19 positions and three stone types: empty, black, white. It yields $\|S\|=3^{19 \times 19} \approx 2 \times 10^{170}$ states. (Atoms of universe is considered $10^{80}$)
+Consider the game of Go (바둑), where the board has 19 x 19 positions and three stone types: empty, black, white. It yields $\|S\| \approx 2.08 \times 10^{170}$ legal positions (Tromp, 2016). (Atoms of universe is considered $10^{80}$)
 
 Therefore, we seek to find an approximation to Q function, such as in DQN : $Q(s,a) \approx \hat{Q}_\theta(\phi (s),a)$.
 
