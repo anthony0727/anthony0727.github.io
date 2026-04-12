@@ -51,7 +51,7 @@ mathjax: true
 ---
 
 ### Agent-Based Computational Models and Generative Social Science
-**Joshua Epstein, 1999** — [paper](https://www.pnas.org/doi/10.1073/pnas.96.suppl_2.15585)
+**Joshua Epstein, 1999** — [paper](https://onlinelibrary.wiley.com/doi/10.1002/(SICI)1099-0526(199905/06)4:5%3C41::AID-CPLX9%3E3.0.CO;2-F)
 
 <!-- your commentary here -->
 
@@ -66,6 +66,13 @@ mathjax: true
 
 ### AI Models Collapse When Trained on Recursively Generated Data
 **Shumailov et al., Nature 2024** — [paper](https://www.nature.com/articles/s41586-024-07566-y)
+
+<!-- your commentary here -->
+
+---
+
+### Bigger, Better, Faster: Human-level Atari with human-level efficiency
+**Max Schwarzer, Johan Obando-Ceron, Aaron Courville, Marc G. Bellemare, Rishabh Agarwal, Pablo Samuel Castro, ICML 2023** — [paper](https://arxiv.org/abs/2305.19452)
 
 <!-- your commentary here -->
 
