@@ -445,3 +445,26 @@ a:visited { color: #205caa; }
   overflow-x: auto;
   width: 100%;
 }
+
+.post-content {
+  overflow-x: hidden;
+}
+
+.post-content mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  padding-bottom: 2px;
+}
+
+.post-content mjx-container[display="true"] > * {
+  max-width: none;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
