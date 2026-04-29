@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Can we trust math?"
-excerpt: "A short reflection on axioms, geometry, and whether scientific reasoning is bounded by human-made formal systems."
+excerpt: ""
 date: 2025-04-09 18:00:00
 mathjax: true
 ---

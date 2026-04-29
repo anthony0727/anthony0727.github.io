@@ -1,31 +1,12 @@
 # Site settings
 title: Anthony W. Jung
-tagline: Machine Learning Engineer
 email: jwseok0727@gmail.com
-description: "Machine learning engineer working on reinforcement learning, PPO/TRPO, LLMs, representation learning, neural signal foundation models, and AI agents."
+description: "Machine Learning Engineer"
 baseurl: ""
 url: "https://anthony0727.github.io"
-lang: en_US
-timezone: Asia/Seoul
 twitter_username: Anthony37709726
 github_username:  anthony0727
 linkedin_username: anthony0727
-
-author:
-  name: Anthony W. Jung
-  email: jwseok0727@gmail.com
-  url: "https://anthony0727.github.io"
-
-twitter:
-  username: Anthony37709726
-  card: summary
-
-social:
-  name: Anthony W. Jung
-  links:
-    - "https://github.com/anthony0727"
-    - "https://www.linkedin.com/in/anthony0727"
-    - "https://x.com/Anthony37709726"
 
 plugins:
   - jekyll-seo-tag
