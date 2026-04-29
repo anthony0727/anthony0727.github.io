@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Function approximation and representation learning in RL"
-excerpt: "The discrepancy between linear RL and deep RL, and intuitive understanding of representation in RL."
+excerpt: "A deep reinforcement learning note on Q-learning, Bellman equations, function approximation, representation learning, and why deep RL is not guaranteed like tabular RL."
 date: 2025-04-10 17:00:00
 mathjax: true
 ---
@@ -147,4 +147,3 @@ Below does not track the magnitude but instead, add an axis to express the magni
 * [David Silver's lecture](https://www.youtube.com/playlist?list=PLzuuYNsE1EZAXYR4FJ75jcJseBmo4KQ9-)
 
 * Sutton and Barto
-

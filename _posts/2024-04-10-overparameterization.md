@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "[Editing] Overdetermined vs Overcomplete vs Overparameterized"
-excerpt: ""
+excerpt: "A compact distinction between overdetermined, underdetermined, overcomplete, and overparameterized systems."
 date: 2025-04-09 18:00:00
 mathjax: true
 ---

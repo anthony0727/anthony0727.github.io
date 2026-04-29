@@ -43,6 +43,13 @@ mathjax: true
 
 ---
 
+### Discovering Governing Equations from Data: Sparse Identification of Nonlinear Dynamical Systems
+**Steven L. Brunton, Joshua L. Proctor, J. Nathan Kutz** — [paper](https://arxiv.org/abs/1509.03580)
+
+Related: [SINDy-RL for Interpretable and Efficient Model-Based Reinforcement Learning](https://www.nature.com/articles/s41467-025-65738-4)
+
+---
+
 ### Loss of Plasticity in Deep Continual Learning
 **Shibhansh Dohare, ..., Richard S. Sutton, Nature 2024** — [paper](https://www.nature.com/articles/s41586-024-07711-7)
 

@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "State vs Observation in RL"
-excerpt: ""
+excerpt: "A reinforcement learning note on state, observation, partial observability, and problem formulation in real-world systems."
 date: 2025-04-09 18:00:00
 mathjax: true
 ---

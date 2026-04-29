@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Policy gradient"
-excerpt: "Don't ever forget about policy gradient."
+excerpt: "A reinforcement learning note on policy gradients, trajectory probability, stochastic computation graphs, and model-free optimization."
 date:   2025-04-10 17:00:00
 mathjax: true
 ---
