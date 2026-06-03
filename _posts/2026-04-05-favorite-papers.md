@@ -46,7 +46,7 @@ mathjax: true
 ### Discovering Governing Equations from Data: Sparse Identification of Nonlinear Dynamical Systems
 **Steven L. Brunton, Joshua L. Proctor, J. Nathan Kutz** — [paper](https://arxiv.org/abs/1509.03580)
 
-SINDy-RL for Interpretable and Efficient Model-Based Reinforcement Learning  
+### SINDy-RL for Interpretable and Efficient Model-Based Reinforcement Learning
 **Nicholas Zolman, Christian Lagemann, Urban Fasel, J. Nathan Kutz, Steven L. Brunton** — [paper](https://www.nature.com/articles/s41467-025-65738-4)
 
 ---
