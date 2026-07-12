@@ -9,7 +9,8 @@ mathjax: true
 
 I want to distinguish the words "state" and "observation".
 
-State can only be observed by an oracle, that fully describes the world with complete knowledge.
+State is what an oracle would use to fully describe the world. In a fully
+observed MDP, though, the agent can observe the state directly.
 
 However, the sensory input to agent is "the observation of a state", which may only contain partial information.
 
@@ -19,7 +20,7 @@ However, many real-world scenarios the state cannot be observed, and in oracle p
 
 Camera sensors outputs occluded images from 2D projection. 
 
-Trading bot using fundamentals, indicators and order books cannot fully encode the market with exogenous variables like Trump's and Elon's tweets. --- but according to efficient-market hypothesis (all information is summarized into asset price) and using sufficiently wide neural network (universal approximation theorem), can we recontruct features solely from asset price? 
+Trading bot using fundamentals, indicators and order books cannot fully encode the market with exogenous variables like Trump's and Elon's tweets. --- but according to efficient-market hypothesis (all information is summarized into asset price) and using sufficiently wide neural network (universal approximation theorem), can we recontruct features solely from asset price? Probably not: universal approximation cannot recover information that is not contained in the input.
 
 
 Therefore, we resort to experssivity and generalization capability of deep models to find approximately optimal solution with observations. (My other post talks about function approximation in RL)

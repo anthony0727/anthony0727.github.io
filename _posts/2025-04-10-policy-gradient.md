@@ -78,13 +78,18 @@ $$
 $$
 </div>
 
-Under parameterization of the policy, the dynamics model is cancelled out and the utility function solely depends on policy and reward function.
+Under parameterization of the policy, the dynamics model is cancelled out from
+the log-gradient — not from the utility itself. The trajectory distribution
+still depends on dynamics, but policy gradient does not need to know or
+differentiate the dynamics model.
 
 The gradient tries to increase probability of paths with positive $R$, and vice versa.
 
 However, the high variance of the observed rewards $R$ leads to high variance in policy gradient, making it unstable.
 
-To solve this, baseline $b$ is introduced, lowering the variance but making the gradient estimator  still unbiased.
+To solve this, baseline $b$ is introduced, lowering the variance while keeping
+the gradient estimator unbiased, as long as the baseline does not depend on the
+sampled action.
 
 Improving from constant baseline substraction, value function is adopted and actor-critic methods emerged, GAE, TRPO and PPO, so on.
 

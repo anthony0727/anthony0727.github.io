@@ -11,7 +11,10 @@ mathjax: true
 
 Is Q learning guaranteed to find optimal policy? 
 
-The answer is, yes, Q-learning finds an optimal policy for any finite Markov decision process. (Finite state, action and rewards sets, not finite episode.)
+The answer is, yes, tabular Q-learning can find an optimal policy for a finite
+Markov decision process — but only when every state-action pair keeps being
+sampled and the learning-rate conditions for convergence hold. "Finite" alone
+is not the guarantee.
 
 But for deep Q learning, the answer is no, partly due to function approximation, known as one of the "deadly triad".
 
@@ -24,7 +27,7 @@ But for deep Q learning, the answer is no, partly due to function approximation,
 
 The heart of RL lies in learning value function, recursively defined by Bellman equation.
 
-The Bellman equation is linear equation that can be solved directly (closed form).
+For a fixed policy, the Bellman expectation equation is linear equation that can be solved directly (closed form).
 
 Consider matrix form :
 
@@ -104,7 +107,10 @@ Generally, $K \ll \|S\|$, so for a fixed $\phi$, the space of expressible value 
 
 Intuitively, then, a well-trained map $\phi$ should be such that $\phi(s)$ captures the salient information of $s \in S$ for return.
 
-As long as the network has sufficient representational capacity, given enough training experience the learned representation $\phi(s)$ will be able to approximate a policy’s value function arbitrarily well.
+As long as the network has sufficient representational capacity, it can in
+principle approximate a policy's value function arbitrarily well. But capacity
+and experience alone do not guarantee that optimization actually finds that
+approximation.
 
 ---
 
@@ -137,6 +143,8 @@ Below does not track the magnitude but instead, add an axis to express the magni
 ---
 
 **Reference**
+
+* [Q-learning convergence theorem — Watkins and Dayan (1992)](https://doi.org/10.1007/BF00992698)
 
 * [Value improvement path](https://arxiv.org/abs/2006.02243)
 

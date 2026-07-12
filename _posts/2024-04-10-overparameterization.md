@@ -75,7 +75,10 @@ Let the decision layer be some linear transformation $W$, for example, single-ta
 
 With no assumption on consistency, usually the system is overdetermined, $n>k$, which means that we have more data points than features.
 
-$y$ and $Z$ is "known" and $W$ is "unknown". therefore we solve for "variable" $W$ and We seek to find good solution out of many solutions.
+$y$ and $Z$ are known and $W$ is unknown. In the overdetermined case, a
+full-column-rank least-squares problem has a unique minimizer. Many exact or
+minimum-loss solutions arise when the system is underdetermined or the feature
+matrix is rank-deficient.
 
 ### Overcompleteness
 
