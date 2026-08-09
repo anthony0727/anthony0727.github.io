@@ -79,11 +79,4 @@ mathjax: true
 
 ---
 
-### Bigger, Better, Faster: Human-level Atari with human-level efficiency
-**Max Schwarzer, Johan Obando-Ceron, Aaron Courville, Marc G. Bellemare, Rishabh Agarwal, Pablo Samuel Castro, ICML 2023** — [paper](https://arxiv.org/abs/2305.19452)
-
-<!-- your commentary here -->
-
----
-
 *this list will grow. slowly.*
