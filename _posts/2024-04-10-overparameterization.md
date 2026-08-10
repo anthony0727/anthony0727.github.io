@@ -1,93 +1,118 @@
 ---
 layout: post
 comments: true
-title: "[Editing] Overdetermined vs Overcomplete vs Overparameterized"
-excerpt: ""
+title: "overdetermined, overcomplete, and overparameterized"
+excerpt: "The three terms all describe redundancy, but they compare different objects."
 date: 2025-04-09 18:00:00
 mathjax: true
 ---
 
-Consider a linear system. Design matrix $A$ and observation $b$ are "known" and we solve for "unknown" $x$.
+The three terms sound similar because each suggests that there is "more than necessary" of something. The difference is what is being counted.
+
+| Term | What is compared? | What does it describe? |
+| --- | --- | --- |
+| Overdetermined | Equations and unknowns | An equation-solving problem |
+| Underdetermined | Unknowns and equations | An equation-solving problem |
+| Overcomplete | Representing vectors and ambient dimension | A representation system |
+| Overparameterized | Model parameters or capacity and training constraints | A model in a fitting regime |
+
+## Overdetermined and underdetermined systems
+
+Consider
 
 $$
-b=Ax
+b=Ax,
 $$
 
-<div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
+where $A\in\mathbb{R}^{m\times p}$, $b\in\mathbb{R}^{m}$, and $x\in\mathbb{R}^{p}$ is unknown.
 
-  <!-- Underdetermined -->
-  <div style="display: flex; gap: 40px; align-items: center;">
-  <p><strong>Underdetermined</strong></p>
-    <div style="text-align: left;">
-      
-      $$
-      \begin{aligned}
-      x + y + z &= 3 \\
-      x + y + 2z &= 4
-      \end{aligned}
-      $$
-    </div>
-    <div>
-      $$
-      A|b = \left[\begin{array}{ccc|c}
-      1 & 1 & 1 & 3 \\
-      1 & 1 & 2 & 4
-      \end{array}\right]
-      $$
-    </div>
-  </div>
+There are $m$ scalar equations and $p$ unknowns:
 
-  <!-- Overdetermined -->
-  <div style="display: flex; gap: 40px; align-items: center;">
-  <p><strong>Overdetermined</strong></p>
-    <div style="text-align: left;">
-      $$
-      \begin{aligned}
-      x + y &= 3 \\
-      x + 2y &= 7 \\
-      4x + 6y &= 21
-      \end{aligned}
-      $$
-    </div>
-    <div>
-      $$
-      A|b = \left[\begin{array}{cc|c}
-      1 & 1 & 3 \\
-      1 & 2 & 7 \\
-      4 & 6 & 21
-      \end{array}\right]
-      $$
-    </div>
-  </div>
+- If $m>p$, the system is **overdetermined**.
+- If $m<p$, the system is **underdetermined**.
+- If $m=p$, it is **square**.
 
-</div>
+These names describe the shape of the problem, not its solution. Rank and consistency still determine whether an exact solution exists and whether it is unique.
 
+For example, an overdetermined system may have no exact solution. If $A$ has full column rank, it nevertheless has a unique least-squares solution. An underdetermined system has a nontrivial null space; whenever it is consistent, it has infinitely many solutions.
 
-Consider an encoder and a decision layer in deep learning.
+Determinedness therefore applies to a system with a specified unknown. It is not a property of a matrix in isolation.
+
+## Overcomplete representations
+
+Now consider
 
 $$
-\hat{y}=ZW^\top
+x=D\alpha,
 $$
 
-Let the encoder be arbitrary nonlinear transformation $x \mapsto z = f_{\phi}(x)$. Given a dataset $X$, we have $Z \in \mathbb{R}^{n \times k}$, $n$ data points with $k$ features.
+where $x\in\mathbb{R}^{d}$, the columns of $D\in\mathbb{R}^{d\times k}$ are dictionary atoms, and $\alpha\in\mathbb{R}^{k}$ contains their coefficients.
 
-Let the decision layer be some linear transformation $W$, for example, single-task regression $W \in \mathbb{R}^{1 \times k}$, multi-class classification $W \in \mathbb{R}^{C \times k}$.
+If the columns of $D$ span $\mathbb{R}^{d}$, the dictionary is complete. If it has more atoms than the dimension of the space, so that $k>d$, it is **overcomplete**.
 
-With no assumption on consistency, usually the system is overdetermined, $n>k$, which means that we have more data points than features.
+An overcomplete dictionary is redundant: its columns cannot all be linearly independent. Consequently, the coefficient problem $D\alpha=x$ is underdetermined. If one coefficient vector represents $x$, then other coefficient vectors generally represent the same $x$.
 
-$y$ and $Z$ are known and $W$ is unknown. In the overdetermined case, a
-full-column-rank least-squares problem has a unique minimizer. Many exact or
-minimum-loss solutions arise when the system is underdetermined or the feature
-matrix is rank-deficient.
+This redundancy can be useful. Different atoms can capture different structures in the data, while an inference rule can select a particular representation. But overcompleteness alone does not make that representation sparse or compact. Sparsity comes from an additional constraint, penalty, or prior on $\alpha$.
 
-### Overcompleteness
+Overcompleteness describes the representation system. It does not describe how many trainable parameters were used to construct it.
 
-Formally, a subset of vectors $\\{\phi_{i}\\}\_{i \in J}$ in a Banach space $X$, sometimes called a *system*, is **complete** if every element in $X$ can be approximated arbitrarily well in norm by finite linear combinations of elements in $\\{\phi_{i}\\}\_{i \in J}$.
+## Overparameterized models
 
-A system is called **overcomplete** if it contains more vectors than necessary to be complete — that is, there exists some $\phi_{j} \in \\{\phi_{i}\\}\_{i \in J}$ such that removing $\phi_{j}$ still leaves the system complete $\\{\phi_{i}\\}\_{i \in J} \setminus \\{\phi_j\\}$ remains complete.
+Consider a model
 
-In research areas such as signal processing and function approximation, overcompleteness can help achieve more stable, robust, or compact representations than using a basis.
+$$
+f_{\theta}(x), \qquad \theta\in\mathbb{R}^{P}.
+$$
+
+A model is called **overparameterized** when its parameterization has more degrees of freedom than are needed to satisfy the training constraints. In this regime, many parameter settings may fit the training data equally well.
+
+The comparison $P>n$, where $n$ is the number of training examples, is a useful intuition but not a complete definition. One example can impose several scalar constraints; parameters can be redundant because of model symmetries; and the architecture determines which functions the model can express. In practice, whether the model can interpolate the training data is often more informative than the raw parameter count.
+
+Overparameterization is also different from **overfitting**. The former describes a model and its fitting problem. The latter describes a gap between training performance and performance on unseen data. An overparameterized model may overfit, but the terms are not synonyms.
+
+## Where the terms overlap
+
+In linear regression,
+
+$$
+y=Xw,
+$$
+
+with $X\in\mathbb{R}^{n\times p}$, the same inequality can bring the three ideas together. Suppose $p>n$ and $X$ has full row rank.
+
+- Solving for $w$ is **underdetermined** because there are more unknown coefficients than equations.
+- The $p$ columns of $X$ form an **overcomplete** spanning set for the $n$-dimensional sample space.
+- The linear model is **overparameterized** relative to the $n$ scalar training constraints.
+
+These statements coincide in this particular setup, but they name different aspects of it: the first refers to the equation, the second to the spanning set, and the third to the model.
+
+## The encoder example
+
+The distinction matters when an encoder is followed by a linear head:
+
+$$
+Z=f_{\phi}(X), \qquad \hat{Y}=ZW^{\top},
+$$
+
+where $Z\in\mathbb{R}^{n\times k}$ contains $k$ features for $n$ data points.
+
+If the encoder is frozen, $Z$ is known and only $W$ is fitted. Under a squared loss, each output dimension reduces to a linear system:
+
+- If $n>k$ and $Z$ has full column rank, fitting the head is overdetermined and has a unique least-squares solution.
+- If $k>n$ and $Z$ has full row rank, fitting the head is underdetermined and has many interpolating solutions.
+
+This analysis applies only to the linear head. It does not establish whether the entire network is overparameterized, because freezing $Z$ removes the encoder parameters $\phi$ from the fitting problem. During end-to-end training, both $\phi$ and $W$ are unknown.
+
+That is the central distinction:
+
+- **Overdetermined** and **underdetermined** refer to equations after the unknowns have been chosen.
+- **Overcomplete** refers to a redundant set of representing elements.
+- **Overparameterized** refers to the capacity of a model relative to the problem used to fit it.
+
+They can describe the same setup from different angles, but they are not interchangeable.
+
+---
 
 **References**
 
-* wiki
+- [What is the relationship between orthogonal, correlation and independence?](https://jaejunyoo.blogspot.com/2018/08/what-is-relationship-between-orthogonal.html)
