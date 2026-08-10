@@ -60,6 +60,9 @@ date: 2026-08-02 00:00:00 +0900
 ### The Primacy Bias in Deep Reinforcement Learning
 **Evgenii Nikishin, Max Schwarzer, Pierluca D’Oro, Pierre-Luc Bacon, Aaron Courville, ICML 2022** — [paper](https://proceedings.mlr.press/v162/nikishin22a/nikishin22a.pdf)
 
+### The Dormant Neuron Phenomenon in Deep Reinforcement Learning
+**Ghada Sokar, Rishabh Agarwal, Pablo Samuel Castro, Utku Evci, ICML 2023** — [paper](https://proceedings.mlr.press/v202/sokar23a/sokar23a.pdf)
+
 ---
 
 ### Advantage Alignment Algorithms
