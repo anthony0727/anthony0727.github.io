@@ -19,27 +19,8 @@ date: 2026-08-02 00:00:00 +0900
 
 ---
 
-### GAIL / VAIL
-**Generative Adversarial Imitation Learning**<br>
-Jonathan Ho, Stefano Ermon, NeurIPS 2016 — [paper](https://arxiv.org/abs/1606.03476)
-
-**Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow**<br>
-Xue Bin Peng, Angjoo Kanazawa, Sam Toyer, Pieter Abbeel, Sergey Levine, ICLR 2019 — [paper](https://arxiv.org/abs/1810.00821)
-
----
-
-### A Distributional Perspective on Reinforcement Learning
-**Marc G. Bellemare, Will Dabney, Rémi Munos, ICML 2017** — [paper](https://arxiv.org/abs/1707.06887)
-
----
-
 ### Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor
 **Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, Sergey Levine, ICML 2018** — [paper](https://arxiv.org/abs/1801.01290)
-
----
-
-### Hyperspherical Normalization for Scalable Deep Reinforcement Learning
-**Hojoon Lee, Youngdo Lee, Takuma Seno, Donghu Kim, Peter Stone, Jaegul Choo, ICML 2025** — [paper](https://arxiv.org/abs/2502.15280)
 
 ---
 
@@ -48,8 +29,21 @@ Xue Bin Peng, Angjoo Kanazawa, Sam Toyer, Pieter Abbeel, Sergey Levine, ICLR 201
 
 ---
 
-### Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model
-**Julian Schrittwieser et al., Nature 2020** — [paper](https://arxiv.org/abs/1911.08265)
+### A Distributional Perspective on Reinforcement Learning
+**Marc G. Bellemare, Will Dabney, Rémi Munos, ICML 2017** — [paper](https://arxiv.org/abs/1707.06887)
+
+---
+
+### Hyperspherical Normalization for Scalable Deep Reinforcement Learning
+**Hojoon Lee, Youngdo Lee, Takuma Seno, Donghu Kim, Peter Stone, Jaegul Choo, ICML 2025** — [paper](https://arxiv.org/abs/2502.15280)
+
+---
+
+**Generative Adversarial Imitation Learning**<br>
+Jonathan Ho, Stefano Ermon, NeurIPS 2016 — [paper](https://arxiv.org/abs/1606.03476)
+
+**Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow**<br>
+Xue Bin Peng, Angjoo Kanazawa, Sam Toyer, Pieter Abbeel, Sergey Levine, ICLR 2019 — [paper](https://arxiv.org/abs/1810.00821)
 
 ---
 
