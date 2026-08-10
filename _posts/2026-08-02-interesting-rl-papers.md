@@ -57,4 +57,9 @@ date: 2026-08-02 00:00:00 +0900
 
 ---
 
+### The Primacy Bias in Deep Reinforcement Learning
+**Evgenii Nikishin, Max Schwarzer, Pierluca D’Oro, Pierre-Luc Bacon, Aaron Courville, ICML 2022** — [paper](https://proceedings.mlr.press/v162/nikishin22a/nikishin22a.pdf)
+
+---
+
 *this list will grow. slowly.*
