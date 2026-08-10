@@ -239,6 +239,19 @@ a:visited { color: #205caa; }
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
+.post-content .term-comparison {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.post-content .term-comparison th,
+.post-content .term-comparison td {
+  border: 1px solid #d5d5e9;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;

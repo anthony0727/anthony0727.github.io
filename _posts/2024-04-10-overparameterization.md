@@ -15,6 +15,7 @@ The three terms sound similar because each suggests that there is "more than nec
 | Underdetermined | Unknowns and equations | An equation-solving problem |
 | Overcomplete | Representing vectors and ambient dimension | A representation system |
 | Overparameterized | Model parameters or capacity and training constraints | A model in a fitting regime |
+{: .term-comparison }
 
 ## Overdetermined and underdetermined systems
 
