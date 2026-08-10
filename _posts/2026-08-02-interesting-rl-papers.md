@@ -39,11 +39,13 @@ date: 2026-08-02 00:00:00 +0900
 
 ---
 
-**Generative Adversarial Imitation Learning**<br>
-Jonathan Ho, Stefano Ermon, NeurIPS 2016 — [paper](https://arxiv.org/abs/1606.03476)
+### Generative Adversarial Imitation Learning
+**Jonathan Ho, Stefano Ermon, NeurIPS 2016** — [paper](https://arxiv.org/abs/1606.03476)
 
-**Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow**<br>
-Xue Bin Peng, Angjoo Kanazawa, Sam Toyer, Pieter Abbeel, Sergey Levine, ICLR 2019 — [paper](https://arxiv.org/abs/1810.00821)
+---
+
+### Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow
+**Xue Bin Peng, Angjoo Kanazawa, Sam Toyer, Pieter Abbeel, Sergey Levine, ICLR 2019** — [paper](https://arxiv.org/abs/1810.00821)
 
 ---
 
