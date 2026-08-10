@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "overdetermined, overcomplete, and overparameterized"
+title: "Overdetermined, overcomplete, and overparameterized"
 excerpt: "The three terms all describe redundancy, but they compare different objects."
 date: 2025-04-09 18:00:00
 mathjax: true
