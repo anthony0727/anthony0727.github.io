@@ -19,6 +19,16 @@ date: 2026-08-02 00:00:00 +0900
 
 ---
 
+### The Value Function Polytope in Reinforcement Learning
+**Robert Dadashi, Adrien Ali Taïga, Nicolas Le Roux, Dale Schuurmans, Marc G. Bellemare, ICML 2019** — [paper](https://arxiv.org/pdf/1901.11524)
+
+---
+
+### A Geometric Perspective on Optimal Representations for Reinforcement Learning
+**Marc G. Bellemare, Will Dabney, Robert Dadashi, Adrien Ali Taïga, Pablo Samuel Castro, Nicolas Le Roux, Dale Schuurmans, Tor Lattimore, Clare Lyle, NeurIPS 2019** — [paper](https://papers.nips.cc/paper_files/paper/2019/file/3cf2559725a9fdfa602ec8c887440f32-Paper.pdf)
+
+---
+
 ### Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor
 **Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, Sergey Levine, ICML 2018** — [paper](https://arxiv.org/abs/1801.01290)
 
