@@ -62,4 +62,9 @@ date: 2026-08-02 00:00:00 +0900
 
 ---
 
+### Advantage Alignment Algorithms
+**Juan Agustin Duque, Milad Aghajohari, Tim Cooijmans, Razvan Ciuca, Tianyu Zhang, Gauthier Gidel, Aaron Courville, ICLR 2025** — [paper](https://arxiv.org/pdf/2406.14662)
+
+---
+
 *this list will grow. slowly.*
