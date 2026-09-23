@@ -36,6 +36,13 @@ mathjax: true
 
 ---
 
+### Auto-Encoding Variational Bayes
+**Diederik P. Kingma, Max Welling, ICLR 2014** — [paper](https://arxiv.org/abs/1312.6114)
+
+<!-- your commentary here -->
+
+---
+
 ### World Models
 **David Ha, Jürgen Schmidhuber, 2018** — [paper](https://arxiv.org/abs/1803.10122)
 
