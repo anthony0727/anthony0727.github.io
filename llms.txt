@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
+
+> {{ site.description }}. Personal essays and research notes.
+
+Each entry links to the original Markdown source and its canonical blog URL. Image paths starting with `/` are relative to {{ site.url }}.
+
+## Posts
+
+{% assign source_base = "https://raw.githubusercontent.com/anthony0727/anthony0727.github.io/main/" -%}
+{% for post in site.posts -%}
+{% assign summary = post.excerpt | default: post.content | strip_html | normalize_whitespace | truncate: 180 -%}
+- [{{ post.title }}]({{ source_base }}{{ post.path | uri_escape }}): {{ summary }} [Blog post]({{ post.url | absolute_url }}).
+{% endfor %}

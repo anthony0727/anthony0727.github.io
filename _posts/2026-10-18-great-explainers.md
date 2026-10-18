@@ -73,4 +73,12 @@ I liked how he studies a concept and explain stuffs.
 
 ---
 
+### David Ha
+
+[Neural Network Evolution Playground with Backprop NEAT](https://blog.otoro.net/2016/05/07/backprop-neat/)
+
+[Weight Agnostic Neural Networks](https://weightagnostic.github.io/) — Adam Gaier and David Ha.
+
+---
+
 *this list will grow. slowly.*
