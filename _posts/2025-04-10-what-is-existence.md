@@ -17,9 +17,11 @@ Does something have to be physically present? Tangible? Or does it exist only wh
 
 If physical existence is a “realization” of something beyond human perception, how could I understand it? Isn’t perception itself limited by the brain?
 
-Pondering these questions, I came up with a strange question. I no longer remember exactly what I had in mind, but this is the closest I can get:
+Pondering these questions, I came up with a strange question:
 
 > 아무것도 ‘존재하지 않는다’는 말자체에 모순이 있는것 같다. 존재하지 않으려면 그 없음이 존재해야되는것 아닌가?
+
+To say that nothing exists seems to require that nothingness itself exists.
 
 Although I’m an atheist now, my name Anthony comes from Antonio, the name I received in the Catholic Church. Growing up, I went to church with my mother every weekend.
 
