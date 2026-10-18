@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "What is the definition of existence?"
-excerpt: ""
+excerpt: "Philosophical thoughts I had when I was 13."
 date: 2025-04-09 18:00:00
 mathjax: true
 ---
@@ -23,12 +23,14 @@ Pondering these questions, I came up with a strange question:
 
 To say that nothing exists seems to require that nothingness itself exists.
 
-Although I’m an atheist now, my name Anthony comes from Antonio, the name I received in the Catholic Church. Growing up, I went to church with my mother every weekend.
-
 If there were parts of the universe that science could not explain, were those parts governed by God? Was this why people turned to religion? Was science broken from the ground up?
+
+I grew up going to church with my mother every weekend. My name Anthony comes from Antonio, the name I received in the Catholic Church, though I’m an atheist now.
 
 *Contact* is a beautiful portrayal of the bridge between science and religion.
 
 <img src="/assets/what-is-existence/image3.png" alt="Contact film poster" width="280" />
 
-Later, I began to see philosophical questions like these beneath the foundations of mathematics. I started looking at the world through a mathematical lens.
+I later came across discussions of [nothingness](https://en.wikipedia.org/wiki/Nothing) and [nonexistence](https://plato.stanford.edu/entries/nonexistent-objects/#ProbNegaSingExisStat) and realized that other people had been asking very similar questions.
+
+Over time, I began to see philosophical questions like these beneath the foundations of mathematics. I started looking at the world through a mathematical lens.
